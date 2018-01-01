@@ -134,10 +134,10 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcr140_x86.def</ModuleDefinitionFile>
-      <AdditionalDependencies>"d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386\msvcrt_vc2013.lib";"d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386\libvcruntime_vc2017mod.lib";libucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>"d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386\msvcrt_vc2013.lib";"d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386\libvcruntime_vc2017mod.lib";"d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386\libucrt_vc2017mod.lib";%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
-      <IgnoreSpecificDefaultLibraries>libvcruntime.lib</IgnoreSpecificDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>libvcruntime.lib;libucrt.lib</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

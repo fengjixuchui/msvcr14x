@@ -66,7 +66,7 @@ EXPORTS
 	___lc_locale_name_func
 	___mb_cur_max_func
 	___mb_cur_max_l_func
-	__acrt_iob_func
+	__acrt_iob_func=my__acrt_iob_func
 	;__conio_common_vcprintf
 	;__conio_common_vcprintf_p
 	;__conio_common_vcprintf_s
@@ -166,7 +166,7 @@ EXPORTS
 	__unDName
 	__unDNameEx
 	__uncaught_exception
-	;__uncaught_exceptions
+	__uncaught_exceptions
 	__wcserror
 	__wcserror_s
 	__wcsncnt
@@ -317,7 +317,7 @@ EXPORTS
 	_fpclass
 	_fpieee_flt
 	_fpreset
-	_fputc_nolock
+	_fputc_nolock=my_fputc_nolock
 	_fputchar
 	_fputwc_nolock
 	_fputwchar
@@ -715,13 +715,13 @@ EXPORTS
 	_mktime64
 	_msize
 	_nextafter
-	;_open
+	_open
 	_open_osfhandle
 	_pclose
 	_pipe
 	_popen
 	_purecall
-	_putc_nolock
+	_putc_nolock=my_putc_nolock
 	_putch
 	_putch_nolock
 	_putenv
@@ -761,7 +761,7 @@ EXPORTS
 	_set_errno
 	_set_error_mode
 	_set_fmode
-	;_set_invalid_parameter_handler
+	_set_invalid_parameter_handler
 	_set_new_handler
 	_set_new_mode
 	_set_printf_count_output
@@ -775,7 +775,7 @@ EXPORTS
 	_setmode
 	_setsystime
 	_sleep
-	;_sopen
+	_sopen
 	_sopen_dispatch
 	_sopen_s
 	_spawnl
@@ -970,7 +970,7 @@ EXPORTS
 	_wmkdir
 	_wmktemp
 	_wmktemp_s
-	;_wopen
+	_wopen
 	_wperror
 	_wpopen
 	_wputenv
@@ -982,7 +982,7 @@ EXPORTS
 	_wsearchenv
 	_wsearchenv_s
 	_wsetlocale
-	;_wsopen
+	_wsopen
 	_wsopen_dispatch
 	_wsopen_s
 	_wspawnl
