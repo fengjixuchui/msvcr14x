@@ -26,13 +26,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="msvcr140_.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="msvcr140_.cpp">
+    <ClCompile Include="dllmain.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="stdafx.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
