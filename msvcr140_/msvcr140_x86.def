@@ -93,27 +93,27 @@ EXPORTS
 	__iscsymf
 	__iswcsym
 	__iswcsymf
-	__libm_sse2_acos
-	__libm_sse2_acosf
-	__libm_sse2_asin
-	__libm_sse2_asinf
-	__libm_sse2_atan
-	__libm_sse2_atan2
-	__libm_sse2_atanf
-	__libm_sse2_cos
-	__libm_sse2_cosf
-	__libm_sse2_exp
-	__libm_sse2_expf
-	__libm_sse2_log
-	__libm_sse2_log10
-	__libm_sse2_log10f
-	__libm_sse2_logf
-	__libm_sse2_pow
-	__libm_sse2_powf
-	__libm_sse2_sin
-	__libm_sse2_sinf
-	__libm_sse2_tan
-	__libm_sse2_tanf
+	__libm_sse2_acos=my__libm_sse2_acos
+	__libm_sse2_acosf=my__libm_sse2_acosf
+	__libm_sse2_asin=my__libm_sse2_asin
+	__libm_sse2_asinf=my__libm_sse2_asinf
+	__libm_sse2_atan=my__libm_sse2_atan
+	__libm_sse2_atan2=my__libm_sse2_atan2
+	__libm_sse2_atanf=my__libm_sse2_atanf
+	__libm_sse2_cos=my__libm_sse2_cos
+	__libm_sse2_cosf=my__libm_sse2_cosf
+	__libm_sse2_exp=my__libm_sse2_exp
+	__libm_sse2_expf=my__libm_sse2_expf
+	__libm_sse2_log=my__libm_sse2_log
+	__libm_sse2_log10=my__libm_sse2_log10
+	__libm_sse2_log10f=my__libm_sse2_log10f
+	__libm_sse2_logf=my__libm_sse2_logf
+	__libm_sse2_pow=my__libm_sse2_pow
+	__libm_sse2_powf=my__libm_sse2_powf
+	__libm_sse2_sin=my__libm_sse2_sin
+	__libm_sse2_sinf=my__libm_sse2_sinf
+	__libm_sse2_tan=my__libm_sse2_tan
+	__libm_sse2_tanf=my__libm_sse2_tanf
 	__p___argc
 	__p___argv
 	__p___wargv
@@ -1045,8 +1045,8 @@ EXPORTS
 	atanhl
 	atof
 	atoi
-	atol
-	atoll
+	atol=msvcrt.atoi
+	atoll=msvcrt._atoi64
 	bsearch
 	bsearch_s
 	btowc
@@ -1309,7 +1309,7 @@ EXPORTS
 	norml
 	perror
 	pow
-	powf=__libm_sse2_powf
+	powf
 	putc
 	putchar
 	puts
@@ -1439,7 +1439,7 @@ EXPORTS
 	wcstok
 	wcstok_s
 	wcstol
-	wcstold
+	wcstold=wcstod
 	wcstoll
 	wcstombs
 	wcstombs_s
@@ -1577,26 +1577,26 @@ EXPORTS
 	_vsprintf_p
 	vsprintf_s
 	_vsprintf_s
-	vsscanf
-	_vsscanf
+	;vsscanf;低版本vc下不一定有
+	;_vsscanf;低版本vc下不一定有
 	_vswprintf
-	_vswprintf_p
+	;_vswprintf_p;低版本vc下不一定有
 	vswprintf_s
 	_vswprintf_s
-	vswscanf
-	_vswscanf
+	;vswscanf;低版本vc下不一定有
+	;_vswscanf;低版本vc下不一定有
 	;non v string
 	_snprintf
 	_snwprintf_s
 	sprintf
 	_sprintf
-	_sprintf_p
+	;_sprintf_p;低版本vc下不一定有
 	sprintf_s
 	_sprintf_s
 	sscanf
 	_sscanf
 	_swprintf
-	_swprintf_p
+	;_swprintf_p;低版本vc下不一定有
 	swprintf_s
 	_swprintf_s
 	swscanf
@@ -1613,6 +1613,7 @@ EXPORTS
 
 
 	;其他还没测试的函数
+	;_except_handler4_common;好像声明了也无效
 	__acrt_InitializeCriticalSectionEx
 	__acrt_GetSystemTimePreciseAsFileTime
 	_CallMemberFunction0
