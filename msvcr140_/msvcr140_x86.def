@@ -1537,3 +1537,85 @@ EXPORTS
 	wcschr
 	wcsrchr
 	wcsstr
+
+	;字符串格式化函数
+	;conio
+	printf
+	_printf
+	_printf_p
+	printf_s
+	_printf_s
+	scanf
+	_scanf
+	wprintf
+	_wprintf
+	_wprintf_p
+	wprintf_s
+	_wprintf_s
+	wscanf
+	_wscanf
+	;stdio
+	fprintf
+	_fprintf
+	_fprintf_p
+	fprintf_s
+	_fprintf_s
+	fscanf
+	_fscanf
+	fwprintf
+	_fwprintf
+	_fwprintf_p
+	fwprintf_s
+	_fwprintf_s
+	fwscanf
+	_fwscanf
+	;v string
+	vsnprintf_s
+	_vsnwprintf_s
+	vsprintf
+	_vsprintf
+	_vsprintf_p
+	vsprintf_s
+	_vsprintf_s
+	vsscanf
+	_vsscanf
+	_vswprintf
+	_vswprintf_p
+	vswprintf_s
+	_vswprintf_s
+	vswscanf
+	_vswscanf
+	;non v string
+	_snprintf
+	_snwprintf_s
+	sprintf
+	_sprintf
+	_sprintf_p
+	sprintf_s
+	_sprintf_s
+	sscanf
+	_sscanf
+	_swprintf
+	_swprintf_p
+	swprintf_s
+	_swprintf_s
+	swscanf
+	_swscanf
+
+	;cpp相关功能函数
+	??_V@YAXPAX@Z
+	??_V@YAXPAXI@Z
+	??2@YAPAXI@Z
+	??3@YAXPAXI@Z
+	??_M@YGXPAXIIP6EX0@Z@Z
+	??_7type_info@@6B@
+	atexit
+
+
+	;其他还没测试的函数
+	__acrt_InitializeCriticalSectionEx
+	__acrt_GetSystemTimePreciseAsFileTime
+	_CallMemberFunction0
+	_CallMemberFunction1
+	_CallMemberFunction2
+	_alloca_probe_16
