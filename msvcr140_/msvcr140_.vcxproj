@@ -139,10 +139,11 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcr140_x86.def</ModuleDefinitionFile>
-      <AdditionalDependencies>"d:\My Documents\Visual Studio 2008\Projects\MSVCRT\Release\MSVCRT.lib";"d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386\msvcrt_win7.lib";D:\WinDDK\7600.16385.1\lib\win7\i386\msvcrt_win2000.obj;"d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386\libvcruntime_vc2017mod.lib";"d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386\libucrt_vc2017mod.lib";%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>"d:\My Documents\Visual Studio 2008\Projects\MSVCRT\Release\MSVCRT.lib";libvcruntime_vc2017mod.lib;libucrt_vc2017mod.lib;chandler4.obj;exsup4.obj;%(AdditionalDependencies)</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
       <IgnoreSpecificDefaultLibraries>libvcruntime.lib;libucrt.lib;kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

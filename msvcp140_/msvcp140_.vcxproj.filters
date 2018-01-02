@@ -455,6 +455,9 @@
     <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwstoxfl.c">
       <Filter>stl</Filter>
     </ClCompile>
+    <ClCompile Include="..\msvcr140_\win2000fix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="msvcp140_.def">

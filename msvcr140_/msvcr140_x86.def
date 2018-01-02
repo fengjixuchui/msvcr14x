@@ -269,7 +269,7 @@ EXPORTS
 	_except1
 	_except_handler2
 	_except_handler3
-	_except_handler4_common
+	_except_handler4_common=_except_handler4_common_downlevel
 	_execl
 	_execle
 	_execlp
@@ -983,7 +983,7 @@ EXPORTS
 	_write
 	_wrmdir
 	_wsearchenv
-	_wsearchenv_s
+	;_wsearchenv_s
 	_wsetlocale
 	_wsopen
 	_wsopen_dispatch
@@ -1498,8 +1498,8 @@ EXPORTS
 	__std_type_info_name
 	__telemetry_main_invoke_trigger
 	__telemetry_main_return_trigger
-	__unDName
-	__unDNameEx
+	;__unDName
+	;__unDNameEx
 	__uncaught_exception
 	__uncaught_exceptions
 	__vcrt_GetModuleFileNameW
@@ -1509,7 +1509,7 @@ EXPORTS
 	_chkesp
 	_except_handler2
 	_except_handler3
-	_except_handler4_common
+	;_except_handler4_common
 	_get_purecall_handler
 	_get_unexpected
 	_global_unwind2
@@ -1542,52 +1542,52 @@ EXPORTS
 	;conio
 	printf
 	_printf
-	_printf_p
-	printf_s
-	_printf_s
+	;_printf_p
+	;printf_s
+	;_printf_s
 	scanf
 	_scanf
 	wprintf
 	_wprintf
-	_wprintf_p
-	wprintf_s
-	_wprintf_s
+	;_wprintf_p
+	;wprintf_s
+	;_wprintf_s
 	wscanf
 	_wscanf
 	;stdio
 	fprintf
 	_fprintf
-	_fprintf_p
-	fprintf_s
-	_fprintf_s
+	;_fprintf_p
+	;fprintf_s
+	;_fprintf_s
 	fscanf
 	_fscanf
 	fwprintf
 	_fwprintf
-	_fwprintf_p
-	fwprintf_s
-	_fwprintf_s
+	;_fwprintf_p
+	;fwprintf_s
+	;_fwprintf_s
 	fwscanf
 	_fwscanf
 	;v string
-	vsnprintf_s
-	_vsnwprintf_s
+	;vsnprintf_s
+	;_vsnwprintf_s
 	vsprintf
 	_vsprintf
-	_vsprintf_p
-	vsprintf_s
-	_vsprintf_s
+	;_vsprintf_p
+	;vsprintf_s
+	;_vsprintf_s
 	;vsscanf;低版本vc下不一定有
 	;_vsscanf;低版本vc下不一定有
 	_vswprintf
 	;_vswprintf_p;低版本vc下不一定有
-	vswprintf_s
-	_vswprintf_s
+	;vswprintf_s
+	;_vswprintf_s
 	;vswscanf;低版本vc下不一定有
 	;_vswscanf;低版本vc下不一定有
 	;non v string
 	_snprintf
-	_snwprintf_s
+	;_snwprintf_s
 	sprintf
 	_sprintf
 	;_sprintf_p;低版本vc下不一定有
@@ -1597,8 +1597,8 @@ EXPORTS
 	_sscanf
 	_swprintf
 	;_swprintf_p;低版本vc下不一定有
-	swprintf_s
-	_swprintf_s
+	;swprintf_s
+	;_swprintf_s
 	swscanf
 	_swscanf
 
@@ -1613,7 +1613,6 @@ EXPORTS
 
 
 	;其他还没测试的函数
-	;_except_handler4_common;好像声明了也无效
 	__acrt_InitializeCriticalSectionEx
 	__acrt_GetSystemTimePreciseAsFileTime
 	_CallMemberFunction0

@@ -4,7 +4,10 @@
 #include "stdafx.h"
 #include "msvcr140_.h"
 
-FILE* __cdecl __iob_func(void);
+FILE* __cdecl __iob_func(void)
+{
+	return NULL;
+}
 FILE* __cdecl my__acrt_iob_func(unsigned const id)
 {
 	FILE* std_files = __iob_func();
