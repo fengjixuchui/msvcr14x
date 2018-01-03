@@ -66,7 +66,7 @@ EXPORTS
 	___lc_locale_name_func
 	___mb_cur_max_func
 	___mb_cur_max_l_func
-	__acrt_iob_func=my__acrt_iob_func
+	__acrt_iob_func
 	;__conio_common_vcprintf
 	;__conio_common_vcprintf_p
 	;__conio_common_vcprintf_s
@@ -320,7 +320,7 @@ EXPORTS
 	_fpclass
 	_fpieee_flt
 	_fpreset
-	_fputc_nolock=my_fputc_nolock
+	_fputc_nolock
 	_fputchar
 	_fputwc_nolock
 	_fputwchar
@@ -724,7 +724,7 @@ EXPORTS
 	_pipe
 	_popen
 	_purecall
-	_putc_nolock=my_putc_nolock
+	_putc_nolock
 	_putch
 	_putch_nolock
 	_putenv
@@ -1150,7 +1150,7 @@ EXPORTS
 	expm1f
 	expm1l
 	fabs
-	fclose
+	fclose=msvcrt.fclose
 	fdim
 	fdimf
 	fdiml
@@ -1601,6 +1601,13 @@ EXPORTS
 	;_swprintf_s
 	swscanf
 	_swscanf
+
+	;msvcrt.dll中已经有的其他函数
+	_iob
+	vfprintf
+	_vsnwprintf
+	_vsnprintf
+
 
 	;cpp相关功能函数
 	??_V@YAXPAX@Z

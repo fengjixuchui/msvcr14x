@@ -3,32 +3,52 @@
 
 #include "stdafx.h"
 #include "msvcr140_.h"
+#include <crtdbg.h>
 
-FILE* __cdecl __iob_func(void)
+struct msvcrt__iobuf {
+	char *_ptr;
+	int   _cnt;
+	char *_base;
+	int   _flag;
+	int   _file;
+	int   _charbuf;
+	int   _bufsiz;
+	char *_tmpfname;
+};
+typedef struct msvcrt__iobuf msvcrt_FILE;
+
+typedef struct {
+	msvcrt_FILE f;
+	CRITICAL_SECTION lock;
+}   msvcrt__FILEX;
+//__crt_stdio_stream_data相当于msvcrt的_FILEX
+
+//msvcrt中stdio的三个元素是FILE对象，需要锁的时候是访问的全局变量_locktable中的对应元素(16+index)
+//而ucrt中stdio的三个元素是__crt_stdio_stream_data对象，也即是msvcrt中的_FILEX对象
+
+msvcrt_FILE* _iob;
+msvcrt_FILE * __cdecl __iob_func(void)
 {
-	return NULL;
+	if (_iob ==NULL)
+	{
+		HMODULE hmod = GetModuleHandle(_T("msvcrt.dll"));
+		_iob = (msvcrt_FILE*)GetProcAddress(hmod, "_iob");
+		_ASSERT(_iob);
+	}
+	return _iob;
 }
-FILE* __cdecl my__acrt_iob_func(unsigned const id)
+FILE* __cdecl __acrt_iob_func(unsigned const id)
 {
-	FILE* std_files = __iob_func();
-	return std_files + id;
+	msvcrt_FILE* fs=__iob_func();
+	return (FILE*)&fs[id];
 }
 
-//VC2013中没有但是低版本VC中有的一些函数
-int __cdecl my_fputc_nolock(
-	IN    int   _Character,
-	IN OUT FILE* _Stream
-)
+int __cdecl __acrt_initialize_stdio()
 {
-	HMODULE hmod = GetModuleHandle(_T("msvcrt.dll"));
-	int(__cdecl* msvcrt_fputc_nolock)(IN int _Character, IN OUT FILE* _Stream) = (int(__cdecl *)(int, FILE *))GetProcAddress(hmod, "_fputc_nolock");
-	return msvcrt_fputc_nolock(_Character, _Stream);
+	return 0;
 }
 
-int __cdecl my_putc_nolock(
-	IN    int   _Character,
-	IN OUT FILE* _Stream
-)
+void __cdecl __acrt_uninitialize_stdio()
 {
-	return my_fputc_nolock(_Character, _Stream);
+
 }
