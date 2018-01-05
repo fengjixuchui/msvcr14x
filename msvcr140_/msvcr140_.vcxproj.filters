@@ -26,9 +26,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="msvcr140_.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="dllmain.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -48,6 +45,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="crt_function.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ucrt_patch.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="crt_debug.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

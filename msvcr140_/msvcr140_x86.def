@@ -67,14 +67,14 @@ EXPORTS
 	___mb_cur_max_func
 	___mb_cur_max_l_func
 	__acrt_iob_func
-	;__conio_common_vcprintf
-	;__conio_common_vcprintf_p
-	;__conio_common_vcprintf_s
-	;__conio_common_vcscanf
-	;__conio_common_vcwprintf
-	;__conio_common_vcwprintf_p
-	;__conio_common_vcwprintf_s
-	;__conio_common_vcwscanf
+	__conio_common_vcprintf
+	__conio_common_vcprintf_p
+	__conio_common_vcprintf_s
+	__conio_common_vcscanf
+	__conio_common_vcwprintf
+	__conio_common_vcwprintf_p
+	__conio_common_vcwprintf_s
+	__conio_common_vcwscanf
 	__control87_2
 	__current_exception
 	__current_exception_context
@@ -140,24 +140,24 @@ EXPORTS
 	__std_type_info_destroy_list
 	__std_type_info_hash
 	__std_type_info_name
-	;__stdio_common_vfprintf
-	;__stdio_common_vfprintf_p
-	;__stdio_common_vfprintf_s
-	;__stdio_common_vfscanf
-	;__stdio_common_vfwprintf
-	;__stdio_common_vfwprintf_p
-	;__stdio_common_vfwprintf_s
-	;__stdio_common_vfwscanf
-	;__stdio_common_vsnprintf_s
-	;__stdio_common_vsnwprintf_s
-	;__stdio_common_vsprintf
-	;__stdio_common_vsprintf_p
-	;__stdio_common_vsprintf_s
-	;__stdio_common_vsscanf
-	;__stdio_common_vswprintf
-	;__stdio_common_vswprintf_p
-	;__stdio_common_vswprintf_s
-	;__stdio_common_vswscanf
+	__stdio_common_vfprintf
+	__stdio_common_vfprintf_p
+	__stdio_common_vfprintf_s
+	__stdio_common_vfscanf
+	__stdio_common_vfwprintf
+	__stdio_common_vfwprintf_p
+	__stdio_common_vfwprintf_s
+	__stdio_common_vfwscanf
+	__stdio_common_vsnprintf_s
+	__stdio_common_vsnwprintf_s
+	__stdio_common_vsprintf
+	__stdio_common_vsprintf_p
+	__stdio_common_vsprintf_s
+	__stdio_common_vsscanf
+	__stdio_common_vswprintf
+	__stdio_common_vswprintf_p
+	__stdio_common_vswprintf_s
+	__stdio_common_vswscanf
 	__strncnt
 	__sys_errlist
 	__sys_nerr
@@ -574,7 +574,7 @@ EXPORTS
 	_mbbtombc_l
 	_mbbtype
 	_mbbtype_l
-	_mbcasemap
+	_mbcasemap CONSTANT 
 	_mbccpy
 	_mbccpy_l
 	_mbccpy_s
@@ -939,7 +939,7 @@ EXPORTS
 	_wctime64_s
 	_wctomb_l
 	_wctomb_s_l
-	_wctype
+	_wctype CONSTANT
 	_wdupenv_s
 	_wexecl
 	_wexecle
@@ -1603,11 +1603,14 @@ EXPORTS
 	_swscanf
 
 	;msvcrt.dll中已经有的其他函数
-	_iob
+	_iob=msvcrt._iob DATA 
 	vfprintf
 	_vsnwprintf
 	_vsnprintf
 
+	;调试版crt中才有的函数
+	_CrtDbgReport
+	_CrtDbgReportW
 
 	;cpp相关功能函数
 	??_V@YAXPAX@Z
@@ -1616,10 +1619,9 @@ EXPORTS
 	??3@YAXPAXI@Z
 	??_M@YGXPAXIIP6EX0@Z@Z
 	??_7type_info@@6B@
-	atexit
 
 
-	;其他还没测试的函数
+	;其他可以导出的函数
 	__acrt_InitializeCriticalSectionEx
 	__acrt_GetSystemTimePreciseAsFileTime
 	_CallMemberFunction0
