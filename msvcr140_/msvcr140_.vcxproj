@@ -134,6 +134,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\vcruntime;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -169,12 +170,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="msvcr140_.h" />
+    <ClInclude Include="msvcrt.h" />
+    <ClInclude Include="printf.h" />
+    <ClInclude Include="scanf.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="console.c" />
     <ClCompile Include="crt_debug.c" />
     <ClCompile Include="dllmain.c" />
+    <ClCompile Include="file.c" />
+    <ClCompile Include="scanf.c" />
     <ClCompile Include="ucrt_patch.c" />
     <ClCompile Include="ms_crt.c" />
     <ClCompile Include="crt_function.c" />
@@ -191,6 +198,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="wcs.c" />
     <ClCompile Include="win2000fix.cpp" />
   </ItemGroup>
   <ItemGroup>

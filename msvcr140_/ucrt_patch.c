@@ -5,22 +5,7 @@
 #include "msvcr140_.h"
 #include <crtdbg.h>
 
-struct msvcrt__iobuf {
-	char *_ptr;
-	int   _cnt;
-	char *_base;
-	int   _flag;
-	int   _file;
-	int   _charbuf;
-	int   _bufsiz;
-	char *_tmpfname;
-};
-typedef struct msvcrt__iobuf msvcrt_FILE;
-
-typedef struct {
-	msvcrt_FILE f;
-	CRITICAL_SECTION lock;
-}   msvcrt__FILEX;
+#include "ucrt_patch.h"
 //__crt_stdio_stream_data相当于msvcrt的_FILEX
 typedef msvcrt__FILEX ucrt__crt_stdio_stream_data;
 

@@ -24,6 +24,15 @@
     <ClInclude Include="msvcr140_.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="printf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="msvcrt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="scanf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.c">
@@ -51,6 +60,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="crt_debug.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="wcs.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="scanf.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="console.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
