@@ -170,20 +170,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="msvcr140_.h" />
-    <ClInclude Include="msvcrt.h" />
-    <ClInclude Include="printf.h" />
-    <ClInclude Include="scanf.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ucrt_patch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="console.c" />
     <ClCompile Include="crt_debug.c" />
     <ClCompile Include="dllmain.c" />
-    <ClCompile Include="file.c" />
-    <ClCompile Include="scanf.c" />
     <ClCompile Include="ucrt_patch.c" />
-    <ClCompile Include="ms_crt.c" />
     <ClCompile Include="crt_function.c" />
     <ClCompile Include="stdafx.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -198,7 +192,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="wcs.c" />
     <ClCompile Include="win2000fix.cpp" />
   </ItemGroup>
   <ItemGroup>

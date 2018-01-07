@@ -1538,75 +1538,8 @@ EXPORTS
 	wcsrchr
 	wcsstr
 
-	;字符串格式化函数
-	;conio
-	printf
-	_printf
-	;_printf_p
-	;printf_s
-	;_printf_s
-	scanf
-	_scanf
-	wprintf
-	_wprintf
-	;_wprintf_p
-	;wprintf_s
-	;_wprintf_s
-	wscanf
-	_wscanf
-	;stdio
-	fprintf
-	_fprintf
-	;_fprintf_p
-	;fprintf_s
-	;_fprintf_s
-	fscanf
-	_fscanf
-	fwprintf
-	_fwprintf
-	;_fwprintf_p
-	;fwprintf_s
-	;_fwprintf_s
-	fwscanf
-	_fwscanf
-	;v string
-	;vsnprintf_s
-	;_vsnwprintf_s
-	vsprintf
-	_vsprintf
-	;_vsprintf_p
-	;vsprintf_s
-	;_vsprintf_s
-	;vsscanf;低版本vc下不一定有
-	;_vsscanf;低版本vc下不一定有
-	_vswprintf
-	;_vswprintf_p;低版本vc下不一定有
-	;vswprintf_s
-	;_vswprintf_s
-	;vswscanf;低版本vc下不一定有
-	;_vswscanf;低版本vc下不一定有
-	;non v string
-	_snprintf
-	;_snwprintf_s
-	sprintf
-	_sprintf
-	;_sprintf_p;低版本vc下不一定有
-	sprintf_s
-	_sprintf_s
-	sscanf
-	_sscanf
-	_swprintf
-	;_swprintf_p;低版本vc下不一定有
-	;swprintf_s
-	;_swprintf_s
-	swscanf
-	_swscanf
-
 	;msvcrt.dll中已经有的其他函数
 	_iob=msvcrt._iob DATA 
-	vfprintf
-	_vsnwprintf
-	_vsnprintf
 
 	;调试版crt中才有的函数
 	_CrtDbgReport
