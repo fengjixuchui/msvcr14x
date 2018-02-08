@@ -106,7 +106,7 @@
     </Link>
     <PostBuildEvent>
       <Command>cd $(OutDir)
-lib /out:msvcp140_.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Command>
+lib /out:msvcprt.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

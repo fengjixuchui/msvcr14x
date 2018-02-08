@@ -24,7 +24,7 @@ typedef msvcrt__FILEX ucrt__crt_stdio_stream_data;
 
 
 msvcrt_FILE* msvcrt__iob;
-msvcrt_FILE * __cdecl __iob_func(void)
+msvcrt_FILE * __cdecl my__iob_func(void)
 {
 	if (msvcrt__iob == NULL)
 	{
@@ -39,13 +39,13 @@ msvcrt_FILE * __cdecl __iob_func(void)
 //不然将没有输出
 FILE* __cdecl __acrt_iob_func(unsigned id)
 {
-	msvcrt_FILE* fs = __iob_func();
+	msvcrt_FILE* fs = my__iob_func();
 	return (FILE*)&fs[id];
 }
 
 BOOL IsMsvcrtStdFileHandle(FILE* f)
 {
-	msvcrt_FILE * fs = __iob_func();
+	msvcrt_FILE * fs = my__iob_func();
 	for (int i=0;i<msvcrt__IOB_ENTRIES;i++)
 	{
 		if (&fs[i]==(msvcrt_FILE*)f)

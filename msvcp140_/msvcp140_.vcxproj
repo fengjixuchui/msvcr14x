@@ -105,7 +105,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\MSVCR140_.lib;winapisupp.obj;StlLCMapStringW.obj;StlCompareStringA.obj;StlCompareStringW.obj;StlLCMapStringA.obj;_secchk_.obj;gs_cookie.obj;gs_report.obj;checkcfg.obj;_cpu_disp_.obj;chandler4gs.obj</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;winapisupp.obj;StlLCMapStringW.obj;StlCompareStringA.obj;StlCompareStringW.obj;StlLCMapStringA.obj;_secchk_.obj;gs_cookie.obj;gs_report.obj;checkcfg.obj;_cpu_disp_.obj;chandler4gs.obj</AdditionalDependencies>
       <AdditionalLibraryDirectories>d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcp140_\lib\i386;d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/IGNORE:4197 /FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
