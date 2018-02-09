@@ -1045,8 +1045,8 @@ EXPORTS
 	atanhl
 	atof
 	atoi
-	atol=msvcrt.atoi
-	atoll=msvcrt._atoi64
+	atol
+	atoll
 	bsearch
 	bsearch_s
 	btowc
@@ -1150,7 +1150,7 @@ EXPORTS
 	expm1f
 	expm1l
 	fabs
-	fclose=msvcrt.fclose
+	fclose
 	fdim
 	fdimf
 	fdiml
@@ -1539,7 +1539,7 @@ EXPORTS
 	wcsstr
 
 	;msvcrt.dll中已经有的其他函数
-	_iob=msvcrt._iob DATA 
+	_iob DATA 
 
 	;调试版crt中才有的函数
 	_CrtDbgReport

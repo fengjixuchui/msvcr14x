@@ -17,11 +17,11 @@
 
 #define _CRT_ALLOCATION_DEFINED
 
-#ifdef _DEBUG
-#define TRACE Trace
-#else
+//#ifdef _DEBUG
+//#define TRACE Trace
+//#else
 #define TRACE
-#endif
+//#endif
 
 //代码来自wine的CRT代码
 #ifdef _WDK_BUILD_

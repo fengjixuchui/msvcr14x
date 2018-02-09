@@ -73,11 +73,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>MSVCR140_</TargetName>
+    <TargetName>MSVCR140D_</TargetName>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>MSVCR140_</TargetName>
+    <TargetName>MSVCR140D_</TargetName>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -103,6 +103,11 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcr140_x86.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
+      <AdditionalDependencies>chandler4.obj;exsup4.obj</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(OutDir)ucrtd.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -119,6 +124,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(OutDir)ucrtd.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -143,11 +150,11 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcr140_x86.def</ModuleDefinitionFile>
-      <AdditionalDependencies>"d:\My Documents\Visual Studio 2008\Projects\MSVCRT\Release\MSVCRT.lib";libvcruntime_vc2017mod.lib;libucrt_vc2017mod.lib;chandler4.obj;exsup4.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>chandler4.obj;exsup4.obj</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
-      <IgnoreSpecificDefaultLibraries>libvcruntime.lib;libucrt.lib;kernel32.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalLibraryDirectories>d:\My Documents\Visual Studio 2017\Projects\msvcr140_\msvcr140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>kernel32.lib</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
       <ImportLibrary>$(OutDir)ucrt.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
@@ -168,19 +175,17 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(OutDir)ucrt.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="msvcr140_.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="ucrt_patch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crt_debug.c" />
-    <ClCompile Include="dllmain.c" />
-    <ClCompile Include="ucrt_patch.c" />
-    <ClCompile Include="crt_function.c" />
     <ClCompile Include="stdafx.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -195,7 +200,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="win2000fix.cpp" />
-    <ClCompile Include="_file.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="msvcr140_x86.def" />
