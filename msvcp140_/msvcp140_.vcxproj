@@ -96,7 +96,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\vcruntime;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -124,7 +124,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\vcruntime;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -145,7 +145,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\vcruntime;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -165,7 +165,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\vcruntime;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,20 +179,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="awint.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\filesys.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\generics.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\primitives.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\wrapwin.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xmath.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xmtx.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xxcctype.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xxdftype.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xxfftype.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xxlftype.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xxstod.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xxwctype.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xxxdtent.h" />
-    <ClInclude Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xxxprec.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\filesys.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\generics.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\primitives.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\wrapwin.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmath.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xmtx.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxcctype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxdftype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxfftype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxlftype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxstod.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxwctype.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxdtent.h" />
+    <ClInclude Include="$(VCToolsInstallDir)\crt\src\stl\xxxprec.h" />
     <ClInclude Include="corecrt_internal.h" />
     <ClInclude Include="ehdata.h" />
     <ClInclude Include="stdafx.h" />
@@ -205,170 +205,170 @@
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </ForcedIncludeFiles>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\atomic.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\cerr.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\cin.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\clog.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\cond.c">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cerr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cin.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\clog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cond.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\cout.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\cthread.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\dllmain.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\excptptr.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\filesys.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\fiopen.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\future.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\instances.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\iomanip.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\ios.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\iosptrs.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\iostream.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\locale.cpp">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cout.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cthread.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\dllmain.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\excptptr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesys.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\fiopen.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\future.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\instances.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iomanip.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ios.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iosptrs.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iostream.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\locale0.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\locale0_implib.cpp">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale0.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale0_implib.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\locale_implib_pure.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\mpiostream.cpp">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale_implib_pure.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\mpiostream.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\multprec.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\mutex.c">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\multprec.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\mutex.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsCpp</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsCpp</CompileAs>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\nothrow.cpp">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\nothrow.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\parallel_algorithms.cpp">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\parallel_algorithms.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\ppltasks.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\raisehan.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\sharedmutex.cpp">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ppltasks.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\raisehan.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\sharedmutex.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\stdhndlr.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\stdthrow.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\syserror.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\taskscheduler.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\thread0.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\uncaught.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\ushcerr.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\ushcin.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\ushclog.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\ushcout.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\ushiostr.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\vector_algorithms.cpp">
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\stdhndlr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\stdthrow.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\syserror.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\taskscheduler.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\thread0.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcerr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcin.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushclog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcout.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushiostr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\vector_algorithms.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\wcerr.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\wcin.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\wclog.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\wcout.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\winapinls.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\wiostrea.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\wlocale.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xalloc.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xcosh.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xdateord.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xdint.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xdnorm.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xdscale.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xdtento.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xdtest.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xdunscal.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xexp.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfcosh.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfdint.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfdnorm.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfdscale.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfdtento.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfdtest.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfdunsca.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xferaise.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfexp.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfprec.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfsinh.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xfvalues.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xgetwctype.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlcosh.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xldint.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xldscale.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xldtento.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xldtest.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xldunsca.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlexp.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlgamma.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlocale.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlock.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlpoly.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlprec.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlsinh.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xlvalues.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xmbtowc.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xmtx.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xnotify.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xonce.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xpoly.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xprec.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xrngabort.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xrngdev.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xsinh.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstod.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstof.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstoflt.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstol.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstold.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstoll.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstopfx.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstoul.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstoull.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstoxflt.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstrcoll.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xstrxfrm.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xthrow.cpp" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xtime.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xtowlower.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xtowupper.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xvalues.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwcscoll.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwcsxfrm.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwctomb.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwstod.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwstof.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwstoflt.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwstold.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwstopfx.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\xwstoxfl.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\_tolower.c" />
-    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.12.25827\crt\src\stl\_toupper.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wcerr.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wcin.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wclog.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wcout.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\winapinls.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wiostrea.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\wlocale.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xalloc.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xcosh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdateord.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdint.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdnorm.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdscale.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdtento.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdtest.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xdunscal.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xexp.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfcosh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdint.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdnorm.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdscale.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdtento.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdtest.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfdunsca.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xferaise.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfexp.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfprec.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfsinh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xfvalues.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xgetwctype.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlcosh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldint.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldscale.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldtento.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldtest.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xldunsca.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlexp.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlgamma.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlocale.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlock.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlpoly.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlprec.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlsinh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xlvalues.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xmbtowc.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xmtx.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xnotify.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xonce.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xpoly.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xprec.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xrngabort.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xrngdev.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xsinh.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstod.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstof.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoflt.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstol.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstold.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoll.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstopfx.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoul.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoull.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstoxflt.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstrcoll.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xstrxfrm.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xthrow.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xtime.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xtowlower.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xtowupper.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xvalues.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwcscoll.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwcsxfrm.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwctomb.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstod.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstof.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoflt.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstold.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstopfx.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoxfl.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_tolower.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_toupper.c" />
     <ClCompile Include="msvcp140_.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
