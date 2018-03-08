@@ -1514,3 +1514,13 @@ EXPORTS
 	?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MAE_JPBD_J@Z
 	?xsputn@?$basic_streambuf@GU?$char_traits@G@std@@@std@@MAE_JPBG_J@Z
 	?xsputn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MAE_JPB_W_J@Z
+	
+	;msvcp140_1.dll
+	_Aligned_get_default_resource
+	_Aligned_new_delete_resource
+	_Aligned_set_default_resource
+	_Unaligned_get_default_resource
+	_Unaligned_new_delete_resource
+	_Unaligned_set_default_resource
+	null_memory_resource
+

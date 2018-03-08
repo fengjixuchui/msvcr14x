@@ -455,6 +455,9 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoxfl.c">
       <Filter>stl</Filter>
     </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\memory_resource.cpp">
+      <Filter>stl</Filter>
+    </ClCompile>
     <ClCompile Include="..\msvcr140_\win2000fix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>

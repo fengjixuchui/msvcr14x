@@ -369,6 +369,12 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\xwstoxfl.c" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_tolower.c" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_toupper.c" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\memory_resource.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
     <ClCompile Include="msvcp140_.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
