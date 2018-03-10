@@ -1,5 +1,6 @@
 #define NONAMELESSUNION
 #include "StdAfx.h"
+#include <intrin0.h>
 #pragma comment(lib,"win2k_KERNEL32.lib")
 #pragma comment(lib,"win2k_kernl32p.lib")
 
