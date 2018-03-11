@@ -348,7 +348,7 @@ EXPORTS
 	_EH_prolog
 	_endthread
 	_endthreadex
-	_environ=_imp___environ
+	_environ=_imp___environ DATA
 	_eof
 	_errno
 	_except_handler2
@@ -372,7 +372,7 @@ EXPORTS
 	_fgetchar
 	_fgetwchar
 	_filbuf
-	_fileinfo
+	_fileinfo DATA
 	_filelength
 	_filelengthi64
 	_fileno
@@ -594,7 +594,7 @@ EXPORTS
 	_libm_sse2_log10_precise=__libm_sse2_log10
 	_libm_sse2_pow_precise=__libm_sse2_pow
 	_libm_sse2_sin_precise=__libm_sse2_sin
-	_libm_sse2_sqrt_precise=__libm_sse2_sqrt
+	_libm_sse2_sqrt_precise
 	_libm_sse2_tan_precise=__libm_sse2_tan
 	_loaddll
 	_local_unwind2
@@ -775,8 +775,8 @@ EXPORTS
 	_onexit=_imp___onexit
 	_open
 	_open_osfhandle
-	_osplatform=_imp___osplatform DATA
-	_osver=_osver_dll
+	_osplatform DATA
+	_osver DATA
 	_outp
 	_outpd
 	_outpw
@@ -1078,7 +1078,7 @@ EXPORTS
 	_wctomb_l
 	_wctomb_s_l
 	_wctype
-	_wenviron=_imp___wenviron
+	_wenviron=_imp___wenviron DATA
 	_wexecl
 	_wexecle
 	_wexeclp
@@ -1105,17 +1105,17 @@ EXPORTS
 	_wgetdcwd
 	_wgetenv
 	_wgetenv_s
-	_winmajor=_winminor_dll
-	_winminor=_winminor_dll
-	_winput_s
-	_winver=_winver_dll
+	_winmajor DATA
+	_winminor DATA
+	;_winput_s
+	_winver DATA
 	_wmakepath
 	_wmakepath_s
 	_wmkdir
 	_wmktemp
 	_wmktemp_s
 	_wopen
-	_woutput_s
+	;_woutput_s
 	_wperror
 	_wpgmptr=_imp___wpgmptr
 	_wpopen

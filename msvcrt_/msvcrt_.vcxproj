@@ -54,6 +54,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -84,7 +85,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -92,6 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;MSVCRT_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\10.0.16299.0\ucrt\inc;.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -99,7 +101,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcrt_x86.def</ModuleDefinitionFile>
-      <AdditionalDependencies>"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\msvcrt.lib";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\dll_obj\misc.lib";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\intel\sdknames.lib";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\intel\dll_lib\eh.lib";$(SolutionDir)$(Configuration)\msvcprt.lib;"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\strdup.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wcsdup.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\dbgrpt.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\dbgrptt.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\fullpath.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wfullpat.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\tempnam.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wtempnam.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\dbgrptw.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\dbgheap.obj";%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\msvcrt.lib";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\dll_obj\misc.lib";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\intel\dll_lib\eh.lib";$(SolutionDir)$(Configuration)\msvcprt.lib;"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\strdup.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wcsdup.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\dbgrpt.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\dbgrptt.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\fullpath.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wfullpat.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\tempnam.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wtempnam.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\dbgrptw.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\dbgheap.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\isctype.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\mbctype.obj";%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386;..\msvcp140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -154,11 +156,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="corecrt_internal_state_isolation.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="os_crt0dat.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="msvcrt_.cpp" />
+    <ClCompile Include="os_crt_misc.cpp" />
+    <ClCompile Include="os_fileinfo.c" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -167,9 +176,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <MASM Include="msvcrt.asm">
+      <FileType>Document</FileType>
+    </MASM>
     <None Include="msvcrt_x86.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>
