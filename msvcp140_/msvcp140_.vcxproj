@@ -94,7 +94,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;_STL_CONCRT_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
@@ -108,11 +108,12 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;winapisupp.obj;StlLCMapStringW.obj;StlCompareStringA.obj;StlCompareStringW.obj;StlLCMapStringA.obj</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT140_.lib;winapisupp.obj;StlLCMapStringW.obj;StlCompareStringA.obj;StlCompareStringW.obj;StlLCMapStringA.obj</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
+      <DelayLoadDLLs>CONCRT140_.dll</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
