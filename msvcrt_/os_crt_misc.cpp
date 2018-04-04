@@ -1,6 +1,9 @@
+#define _CRTIMP
+
 #define WIN32_LEAN_AND_MEAN             // 从 Windows 头中排除极少使用的资料
 // Windows 头文件: 
 #include <windows.h>
+
 
 #include <time.h>
 
@@ -88,25 +91,4 @@ errno_t __cdecl _get_wenviron(_Out_ wchar_t ***p__wenviron)
 
 	*p__wenviron = _wenviron;
 	return 0;
-}
-
-int __CRTDECL _vswprintf_c_l(
-	_Out_writes_opt_(_BufferCount) _Always_(_Post_z_) wchar_t*       const _Buffer,
-	_In_                                              size_t         const _BufferCount,
-	_In_z_ _Printf_format_string_params_(2)           wchar_t const* const _Format,
-	_In_opt_                                          _locale_t      const _Locale,
-	va_list              _ArgList
-);
-int __cdecl _swprintf_c_l(
-	wchar_t *string,
-	size_t count,
-	const wchar_t *format,
-	_locale_t plocinfo,
-	...
-)
-{
-	va_list arglist;
-	va_start(arglist, plocinfo);
-
-	return _vswprintf_c_l(string, count, format, plocinfo, arglist);
 }

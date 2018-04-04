@@ -1,1 +1,0 @@
-set lib=$(msvcr140_ROOT)\Release;%lib%

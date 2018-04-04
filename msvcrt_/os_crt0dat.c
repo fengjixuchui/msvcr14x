@@ -23,12 +23,6 @@
 /* define errno */
 
 
-
-
-/* define umask */
-int _umaskval = 0;
-
-
 /* define version info variables */
 
 _CRTIMP unsigned int _osplatform = 0;
@@ -255,3 +249,5 @@ BOOL os_crt0dat__init()
 
 	return TRUE;
 }
+
+int _forceCRTManifestRTM;

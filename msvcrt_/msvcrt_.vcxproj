@@ -101,9 +101,11 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcrt_x86.def</ModuleDefinitionFile>
-      <AdditionalDependencies>"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\msvcrt.lib";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\dll_obj\misc.lib";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\intel\dll_lib\eh.lib";$(SolutionDir)$(Configuration)\msvcprt.lib;"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\strdup.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wcsdup.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\dbgrpt.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\dbgrptt.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\fullpath.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wfullpat.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\tempnam.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\wtempnam.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\dbgrptw.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\dbgheap.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\isctype.obj";"D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\xdll_obj\cpp_obj\mbctype.obj";%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386;..\msvcp140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>convert.lib;direct.lib;dllstuff.lib;dos.lib;eh.lib;exec.lib;heap.lib;helper.lib;lowio.lib;mbstring.lib;misc.lib;rtc.lib;startup.lib;stdio.lib;string.lib;time.lib;conv.lib;tran.lib;$(SolutionDir)$(Configuration)\msvcprt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\dll_obj;D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\;lib\i386;..\msvcr140_\lib\i386;..\msvcp140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -157,15 +159,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="corecrt_internal_state_isolation.h" />
+    <ClInclude Include="os_crtlib.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="msvcrt_dllmain.cpp" />
     <ClCompile Include="os_crt0dat.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="msvcrt_.cpp" />
+    <ClCompile Include="msvcrt_.c" />
     <ClCompile Include="os_crt_misc.cpp" />
     <ClCompile Include="os_fileinfo.c" />
     <ClCompile Include="stdafx.cpp">

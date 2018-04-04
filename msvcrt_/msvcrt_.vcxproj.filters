@@ -24,24 +24,27 @@
     <ClInclude Include="corecrt_internal_state_isolation.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="os_crtlib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="msvcrt_.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="os_crt0dat.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="os_fileinfo.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="os_crt_misc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="msvcrt_.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="msvcrt_dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
