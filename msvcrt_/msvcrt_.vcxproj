@@ -101,8 +101,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcrt_x86.def</ModuleDefinitionFile>
-      <AdditionalDependencies>convert.lib;direct.lib;dllstuff.lib;dos.lib;eh.lib;exec.lib;heap.lib;helper.lib;lowio.lib;mbstring.lib;misc.lib;rtc.lib;startup.lib;stdio.lib;string.lib;time.lib;conv.lib;tran.lib;$(SolutionDir)$(Configuration)\msvcprt.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\dll_obj;D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\;lib\i386;..\msvcr140_\lib\i386;..\msvcp140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>convert.lib;direct.lib;dllstuff.lib;dos.lib;eh.lib;exec.lib;heap.lib;helper.lib;lowio.lib;mbstring.lib;misc.lib;rtc.lib;startup.lib;stdio.lib;string.lib;time.lib;conv.lib;tran.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\dll_obj;D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\;lib\i386;..\msvcr140_\lib\i386;..\msvcp140_\lib\i386</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
