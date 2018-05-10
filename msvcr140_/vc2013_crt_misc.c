@@ -1,7 +1,7 @@
 //防止我们实现的CRT函数被导出
 #define _CRTIMP
 #include <malloc.h>
-#undef _CRTIMP
+//#undef _CRTIMP
 #include <crtdefs.h>
 
 #include <stdlib.h>

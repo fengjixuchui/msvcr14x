@@ -197,9 +197,6 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\thread0.cpp">
       <Filter>stl</Filter>
     </ClCompile>
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught.cpp">
-      <Filter>stl</Filter>
-    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcerr.cpp">
       <Filter>stl</Filter>
     </ClCompile>
@@ -460,6 +457,15 @@
     </ClCompile>
     <ClCompile Include="..\msvcr140_\win2000fix.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exception.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exceptions.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\crt\src\stl\pplerror.cpp">
+      <Filter>stl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

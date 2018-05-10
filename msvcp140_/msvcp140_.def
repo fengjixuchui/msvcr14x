@@ -23,7 +23,6 @@ EXPORTS
 	__crtWaitForThreadpoolTimerCallbacks
 	?GetCurrentThreadId@platform@details@Concurrency@@YAJXZ
 	?_Throw_C_error@std@@YAXH@Z
-	?_Xbad_alloc@std@@YAXXZ
 	?_Xbad_function_call@std@@YAXXZ
 	?__ExceptionPtrCopy@@YAXPAXPBX@Z
 	?__ExceptionPtrCreate@@YAXPAX@Z
@@ -819,6 +818,7 @@ EXPORTS
 	?_XLgamma@std@@YAMM@Z
 	?_XLgamma@std@@YANN@Z
 	?_XLgamma@std@@YAOO@Z
+	?_Xbad_alloc@std@@YAXXZ
 	?_Xinvalid_argument@std@@YAXPBD@Z
 	?_Xlength_error@std@@YAXPBD@Z
 	?_Xout_of_range@std@@YAXPBD@Z
@@ -1523,4 +1523,7 @@ EXPORTS
 	_Unaligned_new_delete_resource
 	_Unaligned_set_default_resource
 	null_memory_resource
+
+	;msvcp140_2.dll中的符号已经导出了
+
 

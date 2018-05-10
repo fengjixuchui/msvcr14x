@@ -273,7 +273,6 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\syserror.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\taskscheduler.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\thread0.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcerr.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushcin.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ushclog.cpp" />
@@ -372,6 +371,9 @@
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp17</LanguageStandard>
     </ClCompile>
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exception.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exceptions.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\pplerror.cpp" />
     <ClCompile Include="msvcp140_.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
