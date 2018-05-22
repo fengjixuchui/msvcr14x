@@ -169,7 +169,6 @@ EXPORTS
 	__crtSetFileInformationByHandle
 	__set_stl_sync_api_mode
 	xtime_get
-	??$_Getvals@_W@?$time_get@DV?$istreambuf_iterator@DU?$char_traits@D@std@@@std@@@std@@IAEX_WABV_Locinfo@1@@Z
 	??$_Getvals@_W@?$time_get@GV?$istreambuf_iterator@GU?$char_traits@G@std@@@std@@@std@@IAEX_WABV_Locinfo@1@@Z
 	??$_Getvals@_W@?$time_get@_WV?$istreambuf_iterator@_WU?$char_traits@_W@std@@@std@@@std@@IAEX_WABV_Locinfo@1@@Z
 	??0?$_Yarn@D@std@@QAE@ABV01@@Z
