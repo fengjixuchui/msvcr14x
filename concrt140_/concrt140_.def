@@ -108,13 +108,8 @@ EXPORTS
 	??_F?$_SpinWait@$0A@@details@Concurrency@@QAEXXZ
 	??_F_Context@details@Concurrency@@QAEXXZ
 	??_F_Scheduler@details@Concurrency@@QAEXXZ
-	?AgentEventGuid@Concurrency@@3U_GUID@@B
 	?Alloc@Concurrency@@YAPAXI@Z
 	?Block@Context@Concurrency@@SAXXZ
-	?ChoreEventGuid@Concurrency@@3U_GUID@@B
-	?ConcRTEventGuid@Concurrency@@3U_GUID@@B
-	?ConcRT_ProviderGuid@Concurrency@@3U_GUID@@B
-	?ContextEventGuid@Concurrency@@3U_GUID@@B
 	?Create@CurrentScheduler@Concurrency@@SAXABVSchedulerPolicy@2@@Z
 	?Create@Scheduler@Concurrency@@SAPAV12@ABVSchedulerPolicy@2@@Z
 	?CreateResourceManager@Concurrency@@YAPAUIResourceManager@1@XZ
@@ -139,27 +134,19 @@ EXPORTS
 	?Id@CurrentScheduler@Concurrency@@SAIXZ
 	?IsAvailableLocation@CurrentScheduler@Concurrency@@SA_NABVlocation@2@@Z
 	?IsCurrentTaskCollectionCanceling@Context@Concurrency@@SA_NXZ
-	?LockEventGuid@Concurrency@@3U_GUID@@B
 	?Log2@details@Concurrency@@YAKI@Z
 	?NFS_Allocate@details@Concurrency@@YAPAXIIPAX@Z
 	?NFS_Free@details@Concurrency@@YAXPAX@Z
 	?NFS_GetLineSize@details@Concurrency@@YAIXZ
 	?Oversubscribe@Context@Concurrency@@SAX_N@Z
-	?PPLParallelForEventGuid@Concurrency@@3U_GUID@@B
-	?PPLParallelForeachEventGuid@Concurrency@@3U_GUID@@B
-	?PPLParallelInvokeEventGuid@Concurrency@@3U_GUID@@B
 	?RegisterShutdownEvent@CurrentScheduler@Concurrency@@SAXPAX@Z
 	?ResetDefaultSchedulerPolicy@Scheduler@Concurrency@@SAXXZ
-	?ResourceManagerEventGuid@Concurrency@@3U_GUID@@B
-	?ScheduleGroupEventGuid@Concurrency@@3U_GUID@@B
 	?ScheduleGroupId@Context@Concurrency@@SAIXZ
 	?ScheduleTask@CurrentScheduler@Concurrency@@SAXP6AXPAX@Z0@Z
 	?ScheduleTask@CurrentScheduler@Concurrency@@SAXP6AXPAX@Z0AAVlocation@2@@Z
-	?SchedulerEventGuid@Concurrency@@3U_GUID@@B
 	?SetConcurrencyLimits@SchedulerPolicy@Concurrency@@QAEXII@Z
 	?SetDefaultSchedulerPolicy@Scheduler@Concurrency@@SAXABVSchedulerPolicy@2@@Z
 	?SetPolicyValue@SchedulerPolicy@Concurrency@@QAEIW4PolicyElementKey@2@I@Z
-	?VirtualProcessorEventGuid@Concurrency@@3U_GUID@@B
 	?VirtualProcessorId@Context@Concurrency@@SAIXZ
 	?Yield@Context@Concurrency@@SAXXZ
 	?_Abort@_StructuredTaskCollection@details@Concurrency@@AAEXXZ
@@ -172,7 +159,6 @@ EXPORTS
 	?_AcquireWrite@_ReaderWriterLock@details@Concurrency@@QAEXXZ
 	?_Advance@_Concurrent_queue_iterator_base_v4@details@Concurrency@@IAEXXZ
 	?_Assign@_Concurrent_queue_iterator_base_v4@details@Concurrency@@IAEXABV123@@Z
-	?_Byte_reverse_table@details@Concurrency@@3QBEB
 	?_Cancel@_StructuredTaskCollection@details@Concurrency@@QAEXXZ
 	?_Cancel@_TaskCollection@details@Concurrency@@QAEXXZ
 	?_CheckTaskCollection@_UnrealizedChore@details@Concurrency@@IAEXXZ
