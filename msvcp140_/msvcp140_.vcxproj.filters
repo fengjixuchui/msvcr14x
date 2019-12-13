@@ -78,9 +78,6 @@
     <ClInclude Include="trnsctrl.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="winapi_thunks.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -466,6 +463,21 @@
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\pplerror.cpp">
       <Filter>stl</Filter>
+    </ClCompile>
+    <ClCompile Include="StlCompareStringA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StlCompareStringW.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StlLCMapStringA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StlLCMapStringW.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="winapisupp.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

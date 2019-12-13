@@ -108,7 +108,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT140_.lib;winapisupp.obj;StlCompareStringA.obj;StlCompareStringW.obj;StlLCMapStringW.obj;StlLCMapStringA.obj</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT140_.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386</AdditionalLibraryDirectories>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
@@ -133,7 +133,7 @@
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib;winapisupp.obj;StlLCMapStringW.obj;StlCompareStringA.obj;StlCompareStringW.obj;StlLCMapStringA.obj</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -195,7 +195,6 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="trnsctrl.h" />
-    <ClInclude Include="winapi_thunks.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\msvcr140_\win2000fix.cpp">
@@ -381,6 +380,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="StlCompareStringA.cpp" />
+    <ClCompile Include="StlCompareStringW.cpp" />
+    <ClCompile Include="StlLCMapStringA.cpp" />
+    <ClCompile Include="StlLCMapStringW.cpp" />
+    <ClCompile Include="winapisupp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="msvcp140_.def" />

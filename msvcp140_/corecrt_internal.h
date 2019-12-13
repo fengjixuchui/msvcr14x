@@ -1294,7 +1294,7 @@ BOOL WINAPI __acrt_GetXStateFeaturesMask(
     _Out_ PDWORD64 feature_mask
     );
 
-BOOL WINAPI __acrt_InitializeCriticalSectionEx(
+BOOL __cdecl __acrt_InitializeCriticalSectionEx(
     _Out_ LPCRITICAL_SECTION critical_section,
     _In_  DWORD              spin_count,
     _In_  DWORD              flags
