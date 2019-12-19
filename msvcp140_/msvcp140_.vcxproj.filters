@@ -69,9 +69,6 @@
     <ClInclude Include="awint.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="corecrt_internal.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ehdata.h">
       <Filter>头文件</Filter>
     </ClInclude>
