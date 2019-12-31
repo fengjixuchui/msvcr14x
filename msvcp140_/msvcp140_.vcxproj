@@ -114,6 +114,7 @@
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
       <DelayLoadDLLs>CONCRT140_.dll</DelayLoadDLLs>
+      <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -134,6 +135,7 @@
       <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
       <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib</AdditionalDependencies>
+      <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -151,6 +153,7 @@
       <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
+      <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -172,6 +175,7 @@
       <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
+      <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

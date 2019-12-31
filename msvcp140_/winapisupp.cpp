@@ -612,6 +612,6 @@ static int __cdecl initialize_pointers() {
     return 0;
 }
 
-_CRTALLOC(".CRT$XIC") static _PIFV pinit = initialize_pointers;
+_CRTALLOC(".CRT$XIC") /*static*/ _PIFV pinit = initialize_pointers;
 
 #endif // defined _ONECORE
