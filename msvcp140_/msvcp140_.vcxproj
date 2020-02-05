@@ -132,10 +132,11 @@
       <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib;$(SolutionDir)$(Configuration)\CONCRT140D_.lib</AdditionalDependencies>
       <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
+      <DelayLoadDLLs>CONCRT140D_.dll</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

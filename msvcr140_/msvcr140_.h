@@ -10,3 +10,11 @@
 #define MSVCR140_API __declspec(dllimport)
 #endif
 
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <suppress.h>
+#define __WARNING_NOT_SATISFIED 28020
+#define __WARNING_UNUSED_ASSIGNMENT 28931
+
+#include <vcruntime.h>
+#undef _VCRT_DEFINED_CRTIMP

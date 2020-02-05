@@ -1508,6 +1508,9 @@
     <ClCompile Include="oswrappers.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="exports.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="msvcr140_x86.def">

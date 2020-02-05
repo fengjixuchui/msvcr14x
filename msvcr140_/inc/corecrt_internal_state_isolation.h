@@ -1,7 +1,5 @@
 #pragma once
-#include <suppress.h>
-#define __WARNING_NOT_SATISFIED 28020
-#define __WARNING_UNUSED_ASSIGNMENT 28931
+#include "msvcr140_.h"
 
 #ifdef __cplusplus
 extern "C++"

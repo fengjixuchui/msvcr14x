@@ -128,6 +128,10 @@ lib /out:msvcprt.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Command
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>cd $(OutDir)
+lib /out:msvcprtd.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

@@ -97,10 +97,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -111,6 +112,7 @@
       <IgnoreSpecificDefaultLibraries>
       </IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)ucrtd.lib</ImportLibrary>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -119,10 +121,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -139,12 +142,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
-      <AdditionalIncludeDirectories>.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -166,9 +170,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -749,6 +754,7 @@
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.18362.0\ucrt\time\tzset.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.18362.0\ucrt\time\utime.cpp" />
     <ClCompile Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.18362.0\ucrt\time\wcsftime.cpp" />
+    <ClCompile Include="exports.cpp" />
     <ClCompile Include="oswrappers.cpp" />
   </ItemGroup>
   <ItemGroup>
