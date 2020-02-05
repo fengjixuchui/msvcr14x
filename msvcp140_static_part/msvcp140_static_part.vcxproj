@@ -150,6 +150,10 @@ lib /out:msvcprtd.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Comman
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>cd $(OutDir)
+lib /out:msvcprtd.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -173,6 +177,10 @@ lib /out:msvcprtd.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Comman
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>cd $(OutDir)
+lib /out:msvcprt.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />

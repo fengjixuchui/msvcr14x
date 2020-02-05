@@ -1,10 +1,7 @@
 #define NONAMELESSUNION
 #include "StdAfx.h"
 #include <intrin.h>
-#ifdef _M_IX86
-#pragma comment(lib,"win2k_KERNEL32.lib")
-#pragma comment(lib,"win2k_kernl32p.lib")
-#elif defined(_M_X64)
+#if defined(_M_X64)
 #pragma message("x64下可以不编译本文件")
 #endif
 
