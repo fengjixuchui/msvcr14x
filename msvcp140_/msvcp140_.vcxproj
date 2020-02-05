@@ -30,27 +30,27 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -94,10 +94,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;_STL_CONCRT_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP140_EXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
@@ -123,8 +122,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP140_EXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -144,8 +144,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP140_EXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -153,7 +154,6 @@
       <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
-      <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -164,8 +164,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;MSVCP140_EXPORTS;_WINDOWS;_USRDLL;CRTDLL2;_CRTBLD;_ITERATOR_DEBUG_LEVEL=1;_KERNEL32_;_NTSYSTEM_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP140_EXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -175,7 +176,6 @@
       <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
       <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
-      <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -203,6 +203,12 @@
     <ClCompile Include="..\msvcr140_\win2000fix.cpp">
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\atomic.c" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\cerr.cpp" />
@@ -221,13 +227,20 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\filesys.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\fiopen.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\future.cpp" />
-    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\instances.cpp" />
+    <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\instances.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iomanip.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\ios.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iosptrs.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\iostream.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale0.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\locale0_implib.cpp">

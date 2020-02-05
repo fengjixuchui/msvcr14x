@@ -1,12 +1,24 @@
 #define NONAMELESSUNION
 #include "StdAfx.h"
-#include <intrin0.h>
+#include <intrin.h>
+#ifdef _M_IX86
 #pragma comment(lib,"win2k_KERNEL32.lib")
 #pragma comment(lib,"win2k_kernl32p.lib")
+#elif defined(_M_X64)
+#pragma message("x64下可以不编译本文件")
+#endif
 
 #define TRACE
 #define FIXME TRACE
+#define DPRINT1 TRACE
 #define debugstr_w(x) x
+
+#ifdef _M_X64
+int interlocked_cmpxchg128(__int64 *dest, __int64 xchg_high, __int64 xchg_low, __int64 *compare)
+{
+	return _InterlockedCompareExchange128(dest, xchg_high, xchg_low, compare);
+}
+#endif
 
 /*__declspec(naked) */__int64 interlocked_cmpxchg64(__int64 *dest, __int64 xchg, __int64 compare)
 {
@@ -29,7 +41,7 @@ extern "C"
 	PVOID(WINAPI* Real_EncodePointer)(__in_opt PVOID Ptr);
 	PVOID WINAPI EncodePointer(__in_opt PVOID Ptr)
 	{
-		if (Real_EncodePointer==NULL)
+		if (Real_EncodePointer == NULL)
 		{
 			Real_EncodePointer = (PVOID(__stdcall *)(PVOID))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "EncodePointer");
 		}
@@ -47,7 +59,7 @@ extern "C"
 	__out_opt PVOID(WINAPI* Real_DecodePointer)(__in_opt PVOID Ptr);
 	__out_opt PVOID WINAPI DecodePointer(__in_opt PVOID Ptr)
 	{
-		if (Real_DecodePointer==NULL)
+		if (Real_DecodePointer == NULL)
 		{
 			Real_DecodePointer = (PVOID(__stdcall *)(PVOID))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "DecodePointer");
 		}
@@ -65,7 +77,7 @@ extern "C"
 	BOOL(WINAPI* Real_GetModuleHandleExW)(__in  DWORD dwFlags, __in_opt LPCWSTR lpModuleName, __out HMODULE* phModule);
 	BOOL WINAPI GetModuleHandleExW(__in  DWORD dwFlags, __in_opt LPCWSTR lpModuleName, __out HMODULE* phModule)
 	{
-		if (Real_GetModuleHandleExW==NULL)
+		if (Real_GetModuleHandleExW == NULL)
 		{
 			Real_GetModuleHandleExW =
 				(BOOL(__stdcall *)(DWORD, LPCWSTR, HMODULE *))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "GetModuleHandleExW");
@@ -89,11 +101,11 @@ extern "C"
 	int (WINAPI* Real_CompareStringA)(__in LCID Locale, __in DWORD dwCmpFlags, __in_ecount(cchCount1) PCNZCH lpString1, __in int cchCount1, __in_ecount(cchCount2) PCNZCH lpString2, __in int cchCount2);
 	int WINAPI CompareStringA(__in LCID Locale, __in DWORD dwCmpFlags, __in_ecount(cchCount1) PCNZCH lpString1, __in int cchCount1, __in_ecount(cchCount2) PCNZCH lpString2, __in int cchCount2)
 	{
-		if (Real_CompareStringA==NULL)
+		if (Real_CompareStringA == NULL)
 		{
 			Real_CompareStringA = (int(__stdcall *)(LCID, DWORD, PCNZCH, int, PCNZCH, int))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "CompareStringA");
 		}
-		
+
 		if (Locale == LOCALE_INVARIANT)
 		{
 			if (GetWindowsVersionEx(FALSE) <= 0x0500)
@@ -105,9 +117,9 @@ extern "C"
 	}
 
 	int (WINAPI* Real_CompareStringW)(__in LCID Locale, __in DWORD dwCmpFlags, __in_ecount(cchCount1) PCNZWCH lpString1, __in int cchCount1, __in_ecount(cchCount2) PCNZWCH lpString2, __in int cchCount2);
-	int WINAPI CompareStringW(__in LCID Locale, __in DWORD dwCmpFlags, __in_ecount(cchCount1) PCNZWCH lpString1, __in int cchCount1, __in_ecount(cchCount2) PCNZWCH lpString2,__in int cchCount2)
+	int WINAPI CompareStringW(__in LCID Locale, __in DWORD dwCmpFlags, __in_ecount(cchCount1) PCNZWCH lpString1, __in int cchCount1, __in_ecount(cchCount2) PCNZWCH lpString2, __in int cchCount2)
 	{
-		if (Real_CompareStringW==NULL)
+		if (Real_CompareStringW == NULL)
 		{
 			Real_CompareStringW =
 				(int(__stdcall *)(LCID, DWORD, PCNZWCH, int, PCNZWCH, int))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "CompareStringW");
@@ -147,11 +159,7 @@ extern "C"
 		do
 		{
 			old = *list;
-#if VER_PRODUCTBUILD > 7600
-			_new.s.CpuId = old.s.CpuId + 1;
-#else
 			_new.s.Sequence = old.s.Sequence + 1;
-#endif
 		} while (interlocked_cmpxchg64((__int64 *)&list->Alignment, _new.Alignment,
 			old.Alignment) != old.Alignment);
 		return old.s.Next.Next;
@@ -171,7 +179,7 @@ extern "C"
 		SLIST_HEADER old, _new;
 
 #ifdef _WIN64
-		new.Header16.NextEntry = (ULONG_PTR)entry >> 4;
+		_new.Header16.NextEntry = (ULONG_PTR)entry >> 4;
 		do
 		{
 			old = *list;
@@ -187,21 +195,17 @@ extern "C"
 			old = *list;
 			entry->Next = old.s.Next.Next;
 			_new.s.Depth = old.s.Depth + 1;
-#if VER_PRODUCTBUILD > 7600
-			_new.s.CpuId = old.s.CpuId + 1;
-#else
 			_new.s.Sequence = old.s.Sequence + 1;
-#endif
 		} while (interlocked_cmpxchg64((__int64 *)&list->Alignment, _new.Alignment,
 			old.Alignment) != old.Alignment);
 		return old.s.Next.Next;
 #endif
 	}
 
-	PSLIST_ENTRY (WINAPI* Real_InterlockedPushEntrySList)(_Inout_ PSLIST_HEADER ListHead, _Inout_ __drv_aliasesMem PSLIST_ENTRY ListEntry);
+	PSLIST_ENTRY(WINAPI* Real_InterlockedPushEntrySList)(_Inout_ PSLIST_HEADER ListHead, _Inout_ __drv_aliasesMem PSLIST_ENTRY ListEntry);
 	PSLIST_ENTRY WINAPI	InterlockedPushEntrySList(_Inout_ PSLIST_HEADER ListHead, _Inout_ __drv_aliasesMem PSLIST_ENTRY ListEntry)
 	{
-		if (Real_InterlockedPushEntrySList ==NULL)
+		if (Real_InterlockedPushEntrySList == NULL)
 		{
 			Real_InterlockedPushEntrySList = (PSLIST_ENTRY(__stdcall *)(PSLIST_HEADER, PSLIST_ENTRY))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "InterlockedPushEntrySList");
 		}
@@ -213,25 +217,40 @@ extern "C"
 		return _RtlInterlockedPushEntrySList(ListHead, ListEntry);
 	}
 
-	/*************************************************************************
-	* RtlInitializeSListHead   [NTDLL.@]
-	*/
-	VOID WINAPI _RtlInitializeSListHead(PSLIST_HEADER list)
+	VOID NTAPI _RtlInitializeSListHead(
+		_Out_ PSLIST_HEADER SListHead)
 	{
-#ifdef _WIN64
-		list->s.Alignment = list->s.Region = 0;
-		list->Header16.HeaderType = 1;  /* we use the 16-byte header */
+#if defined(_WIN64)
+		/* Make sure the header is 16 byte aligned */
+		if (((ULONG_PTR)SListHead & 0xf) != 0)
+		{
+			DPRINT1("Unaligned SListHead: 0x%p\n", SListHead);
+			RtlRaiseStatus(STATUS_DATATYPE_MISALIGNMENT);
+		}
+
+		/* Initialize the Region member */
+#if defined(_IA64_)
+	/* On Itanium we store the region in the list head */
+		SListHead->Region = (ULONG_PTR)SListHead & VRN_MASK;
 #else
-		list->Alignment = 0;
+	/* On amd64 we don't need to store anything */
+		SListHead->s.Region = 0;
+#endif /* _IA64_ */
+#endif /* _WIN64 */
+
+#if defined(_WIN64)
+		SListHead->s.Alignment = 0;
+#else
+		SListHead->Alignment = 0;
 #endif
 	}
 
-	VOID (WINAPI* Real_InitializeSListHead)(__inout PSLIST_HEADER ListHead);
+	VOID(WINAPI* Real_InitializeSListHead)(__inout PSLIST_HEADER ListHead);
 	VOID WINAPI InitializeSListHead(__inout PSLIST_HEADER ListHead)
 	{
-		if (Real_InitializeSListHead==NULL)
+		if (Real_InitializeSListHead == NULL)
 		{
-			Real_InitializeSListHead= (void(__stdcall *)(PSLIST_HEADER))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "InitializeSListHead");
+			Real_InitializeSListHead = (void(__stdcall *)(PSLIST_HEADER))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "InitializeSListHead");
 		}
 		if (Real_InitializeSListHead)
 		{
@@ -356,9 +375,9 @@ extern "C"
 			*/
 			if (pTZinfo->StandardDate.wMonth == 0 ||
 				(pTZinfo->StandardDate.wYear == 0 &&
-				(pTZinfo->StandardDate.wDay<1 ||
+				(pTZinfo->StandardDate.wDay < 1 ||
 					pTZinfo->StandardDate.wDay>5 ||
-					pTZinfo->DaylightDate.wDay<1 ||
+					pTZinfo->DaylightDate.wDay < 1 ||
 					pTZinfo->DaylightDate.wDay>5)))
 			{
 				SetLastError(ERROR_INVALID_PARAMETER);
@@ -410,7 +429,7 @@ extern "C"
 				afterDaylightDate = SysTime.wYear > year;
 
 			retval = TIME_ZONE_ID_STANDARD;
-			if (pTZinfo->DaylightDate.wMonth <  pTZinfo->StandardDate.wMonth) {
+			if (pTZinfo->DaylightDate.wMonth < pTZinfo->StandardDate.wMonth) {
 				/* Northern hemisphere */
 				if (beforeStandardDate && afterDaylightDate)
 					retval = TIME_ZONE_ID_DAYLIGHT;
@@ -470,16 +489,16 @@ extern "C"
 	*  Success: TRUE. lpUniversalTime contains the converted time.
 	*  Failure: FALSE.
 	*/
-	BOOL (WINAPI* Real_TzSpecificLocalTimeToSystemTime)(
+	BOOL(WINAPI* Real_TzSpecificLocalTimeToSystemTime)(
 		const TIME_ZONE_INFORMATION *lpTimeZoneInformation,
 		const SYSTEMTIME *lpLocalTime, LPSYSTEMTIME lpUniversalTime);
 	BOOL WINAPI TzSpecificLocalTimeToSystemTime(
 		const TIME_ZONE_INFORMATION *lpTimeZoneInformation,
 		const SYSTEMTIME *lpLocalTime, LPSYSTEMTIME lpUniversalTime)
 	{
-		if (Real_TzSpecificLocalTimeToSystemTime==NULL)
+		if (Real_TzSpecificLocalTimeToSystemTime == NULL)
 		{
-			Real_TzSpecificLocalTimeToSystemTime= (BOOL(__stdcall *)(const TIME_ZONE_INFORMATION *, const SYSTEMTIME *, LPSYSTEMTIME))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "TzSpecificLocalTimeToSystemTime");
+			Real_TzSpecificLocalTimeToSystemTime = (BOOL(__stdcall *)(const TIME_ZONE_INFORMATION *, const SYSTEMTIME *, LPSYSTEMTIME))GetProcAddress(GetModuleHandle(_T("Kernel32.dll")), "TzSpecificLocalTimeToSystemTime");
 		}
 		if (Real_TzSpecificLocalTimeToSystemTime)
 		{

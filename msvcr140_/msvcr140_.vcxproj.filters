@@ -1508,9 +1508,6 @@
     <ClCompile Include="oswrappers.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="crt_debug.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="msvcr140_x86.def">
@@ -1527,6 +1524,9 @@
     </None>
     <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.18362.0\ucrt\inc\i386\cruntime.inc">
       <Filter>ucrt\inc\i386</Filter>
+    </None>
+    <None Include="msvcr140_x64.def">
+      <Filter>源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

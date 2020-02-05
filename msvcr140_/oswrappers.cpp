@@ -3676,6 +3676,12 @@ extern "C"
 	{
 		return __crt_state_management::wrapped_invoke(_fpclass, _X);
 	}
+#ifdef _M_X64
+	float __cdecl _o__scalbf(_In_ float _X, _In_ long _Y)
+	{
+		return __crt_state_management::wrapped_invoke(_scalbf, _X, _Y);
+	}
+#endif
 	int __cdecl _o___fpe_flt_rounds(void)
 	{
 		return __crt_state_management::wrapped_invoke(__fpe_flt_rounds);
@@ -4234,6 +4240,140 @@ extern "C"
 	}
 
 	//math
+#if defined _M_X64
+
+	float __cdecl _o__logbf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(_logbf, _X);
+	}
+	float __cdecl _o__nextafterf(_In_ float _X, _In_ float _Y)
+	{
+		return __crt_state_management::wrapped_invoke(_nextafterf, _X, _Y);
+	}
+	int   __cdecl _o__finitef(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(_finitef, _X);
+	}
+	int   __cdecl _o__isnanf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(_isnanf, _X);
+	}
+	int   __cdecl _o__fpclassf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(_fpclassf, _X);
+	}
+
+	int   __cdecl _o__set_FMA3_enable(_In_ int _Flag)
+	{
+		return __crt_state_management::wrapped_invoke(_set_FMA3_enable, _Flag);
+	}
+	int   __cdecl _o__get_FMA3_enable(void)
+	{
+		return __crt_state_management::wrapped_invoke(_get_FMA3_enable);
+	}
+
+#elif defined _M_ARM || defined _M_ARM64 || defined _M_HYBRID_X86_ARM64
+
+	int   __cdecl _o__finitef(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(_finitef, _X);
+	}
+	float __cdecl _o__logbf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(_logbf, _X);
+	}
+
+
+#endif
+
+
+
+#if defined _M_X64 || defined _M_ARM || defined _M_ARM64 || defined _M_HYBRID_X86_ARM64 || defined _CORECRT_BUILD_APISET
+
+
+	float __cdecl _o_acosf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(acosf, _X);
+	}
+	float __cdecl _o_asinf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(asinf, _X);
+	}
+	float __cdecl _o_atan2f(_In_ float _Y, _In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(atan2f, _Y, _X);
+	}
+	float __cdecl _o_atanf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(atanf, _X);
+	}
+	float __cdecl _o_ceilf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(ceilf, _X);
+	}
+	float __cdecl _o_cosf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(cosf, _X);
+	}
+	float __cdecl _o_coshf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(coshf, _X);
+	}
+	float __cdecl _o_expf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(expf, _X);
+	}
+#endif
+
+#if defined _M_X64 || defined _M_ARM || defined _M_ARM64 || defined _M_HYBRID_X86_ARM64
+
+	float __cdecl _o_floorf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(floorf, _X);
+	}
+	float __cdecl _o_fmodf(_In_ float _X, _In_ float _Y)
+	{
+		return __crt_state_management::wrapped_invoke(fmodf, _X, _Y);
+	}
+#endif
+
+#if defined _M_X64 || defined _M_ARM || defined _M_ARM64 || defined _M_HYBRID_X86_ARM64 || defined _CORECRT_BUILD_APISET
+
+	float  __cdecl _o_log10f(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(log10f, _X);
+	}
+	float  __cdecl _o_logf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(logf, _X);
+	}
+	float  __cdecl _o_modff(_In_ float _X, _Out_ float *_Y)
+	{
+		return __crt_state_management::wrapped_invoke(modff, _X, _Y);
+	}
+	float  __cdecl _o_sinf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(sinf, _X);
+	}
+	float  __cdecl _o_sinhf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(sinhf, _X);
+	}
+	float  __cdecl _o_sqrtf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(sqrtf, _X);
+	}
+	float  __cdecl _o_tanf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(tanf, _X);
+	}
+	float  __cdecl _o_tanhf(_In_ float _X)
+	{
+		return __crt_state_management::wrapped_invoke(tanhf, _X);
+	}
+#endif
+
+#ifdef _M_IX86
 
 	//stubs.c
 	double CDECL _CIsin(double x);
@@ -4528,6 +4668,9 @@ extern "C"
 	{
 		return __crt_state_management::wrapped_invoke_void(__libm_sse2_tanf);
 	}
+#endif
+
+
 
 	//except
 	double __cdecl _except1(DWORD fpe, _FP_OPERATION_CODE op, double arg, double res, DWORD cw, void * unk);
