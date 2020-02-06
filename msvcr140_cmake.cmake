@@ -1,1 +1,7 @@
+if(CMAKE_CL_64) 
+link_directories("$ENV{msvcr140_ROOT}/x64/Release")
+link_directories("$ENV{msvcr140_ROOT}/x64/Debug")
+else()
 link_directories("$ENV{msvcr140_ROOT}/Release")
+link_directories("$ENV{msvcr140_ROOT}/Debug")
+endif()
