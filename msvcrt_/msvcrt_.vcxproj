@@ -102,7 +102,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcrt_x86.def</ModuleDefinitionFile>
       <AdditionalDependencies>convert.lib;direct.lib;dllstuff.lib;dos.lib;eh.lib;exec.lib;heap.lib;helper.lib;lowio.lib;mbstring.lib;misc.lib;rtc.lib;startup.lib;stdio.lib;string.lib;time.lib;conv.lib;tran.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\dll_obj;D:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\crt\src\build\intel\;lib\i386;..\msvcr140_\lib\i386;..\msvcp140_\lib\i386</AdditionalLibraryDirectories>
@@ -124,7 +124,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcrt_x86.def</ModuleDefinitionFile>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -143,7 +143,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcrt_x86.def</ModuleDefinitionFile>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -167,7 +167,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcrt_x86.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>

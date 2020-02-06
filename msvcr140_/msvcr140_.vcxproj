@@ -106,7 +106,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcr140_x86.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
       <AdditionalDependencies>chandler4.obj;exsup4.obj;Certidl.lib</AdditionalDependencies>
@@ -133,7 +133,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)ucrtd.lib</ImportLibrary>
       <ModuleDefinitionFile>msvcr140_x64.def</ModuleDefinitionFile>
       <OptimizeReferences>true</OptimizeReferences>
@@ -160,7 +160,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ModuleDefinitionFile>msvcr140_x86.def</ModuleDefinitionFile>
       <AdditionalDependencies>chandler4.obj;exsup4.obj;Certidl.lib</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
@@ -188,7 +188,7 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)ucrt.lib</ImportLibrary>
       <ModuleDefinitionFile>msvcr140_x64.def</ModuleDefinitionFile>
     </Link>
