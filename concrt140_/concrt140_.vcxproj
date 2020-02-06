@@ -121,6 +121,7 @@
       <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_ATL_XP_TARGETING;CONCRTDLL;_CRTBLD;CONCRT140_EXPORTS;_WINDOWS;_USRDLL;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.;..\msvcp140_;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SupportJustMyCode>false</SupportJustMyCode>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -128,6 +129,8 @@
       <ModuleDefinitionFile>concrt140_.def</ModuleDefinitionFile>
       <AdditionalDependencies>$(SolutionDir)$(Configuration)\msvcprtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -139,6 +142,7 @@
       <PreprocessorDefinitions>_WIN32_WINNT=0x0601;_ATL_XP_TARGETING;CONCRTDLL;_CRTBLD;CONCRT140_EXPORTS;_WINDOWS;_USRDLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.;..\msvcp140_;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SupportJustMyCode>false</SupportJustMyCode>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -146,6 +150,8 @@
       <ModuleDefinitionFile>concrt140_.def</ModuleDefinitionFile>
       <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\msvcprtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

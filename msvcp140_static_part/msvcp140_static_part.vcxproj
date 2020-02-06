@@ -123,6 +123,7 @@ lib /out:msvcprt.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Command
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;N:\CPP_BOOKS\DEV_PACKS\boost_1_66_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -145,6 +146,7 @@ lib /out:msvcprtd.lib msvcp140_dynamic_part.lib msvcp140_static_part.lib</Comman
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\stl;N:\CPP_BOOKS\DEV_PACKS\boost_1_66_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

@@ -102,6 +102,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
+      <SupportJustMyCode>false</SupportJustMyCode>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -113,6 +114,8 @@
       </IgnoreSpecificDefaultLibraries>
       <ImportLibrary>$(OutDir)ucrtd.lib</ImportLibrary>
       <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -126,12 +129,15 @@
       <MinimalRebuild>false</MinimalRebuild>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
+      <SupportJustMyCode>false</SupportJustMyCode>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)ucrtd.lib</ImportLibrary>
       <ModuleDefinitionFile>msvcr140_x64.def</ModuleDefinitionFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
