@@ -41,7 +41,7 @@
     <ClCompile Include="os_crt_misc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="msvcrt_.c">
+    <ClCompile Include="msvcrx.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="msvcrt_dllmain.cpp">

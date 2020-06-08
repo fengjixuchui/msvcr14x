@@ -76,19 +76,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>MSVCR140D_</TargetName>
+    <TargetName>MSVCR14XD</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>MSVCR140D_</TargetName>
+    <TargetName>MSVCR14XD</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>MSVCR140_</TargetName>
+    <TargetName>MSVCR14X</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>MSVCR140_</TargetName>
+    <TargetName>MSVCR14X</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -96,17 +96,17 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles>msvcr14x.h</ForcedIncludeFiles>
       <SupportJustMyCode>false</SupportJustMyCode>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <ModuleDefinitionFile>msvcr140_x86.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>msvcr14x_x86.def</ModuleDefinitionFile>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
       <AdditionalDependencies>chandler4.obj;exsup4.obj;Certidl.lib</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>
@@ -124,18 +124,18 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles>msvcr14x.h</ForcedIncludeFiles>
       <SupportJustMyCode>false</SupportJustMyCode>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)ucrtd.lib</ImportLibrary>
-      <ModuleDefinitionFile>msvcr140_x64.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>msvcr14x_x64.def</ModuleDefinitionFile>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <BaseAddress>0x401000000</BaseAddress>
@@ -149,20 +149,20 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles>msvcr14x.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <ModuleDefinitionFile>msvcr140_x86.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>msvcr14x_x86.def</ModuleDefinitionFile>
       <AdditionalDependencies>chandler4.obj;exsup4.obj;Certidl.lib</AdditionalDependencies>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <AdditionalLibraryDirectories>lib\i386</AdditionalLibraryDirectories>
@@ -178,10 +178,10 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR140_EXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DLL;_CRTBLD;_VCRT_BUILD;_VCRT_ALLOW_INTERNALS;CRTDLL;_CRT_GLOBAL_STATE_ISOLATION;_WDK_BUILD_;_KERNEL32_;_NTSYSTEM_;MSVCR14XEXPORTS;_WINDOWS;_USRDLL;_CRT_DECLARE_GLOBAL_VARIABLES_DIRECTLY;_CORECRT_BUILD;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <AdditionalIncludeDirectories>.;.\inc;$(VCToolsInstallDir)\crt\src\vcruntime;$(UniversalCRTSdkDir)\Source\$(TargetUniversalCRTVersion)\ucrt\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>msvcr140_.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles>msvcr14x.h</ForcedIncludeFiles>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <StringPooling>true</StringPooling>
@@ -192,7 +192,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
       <ImportLibrary>$(OutDir)ucrt.lib</ImportLibrary>
-      <ModuleDefinitionFile>msvcr140_x64.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>msvcr14x_x64.def</ModuleDefinitionFile>
       <BaseAddress>0x501000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
@@ -217,7 +217,7 @@
     <ClInclude Include="inc\nt.h" />
     <ClInclude Include="inc\ntrtl.h" />
     <ClInclude Include="inc\nturtl.h" />
-    <ClInclude Include="msvcr140_.h" />
+    <ClInclude Include="msvcr14x.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -770,8 +770,8 @@
     <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat_s.inl" />
     <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncpy_s.inl" />
     <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsnset_s.inl" />
-    <None Include="msvcr140_x64.def" />
-    <None Include="msvcr140_x86.def" />
+    <None Include="msvcr14x_x64.def" />
+    <None Include="msvcr14x_x86.def" />
   </ItemGroup>
   <ItemGroup>
     <MASM Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\string\amd64\strcat.asm">

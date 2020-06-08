@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvcr140_", "msvcr140_\msvcr140_.vcxproj", "{C5CEF085-11DD-4A18-9D4D-BE5DDFC63402}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvcr14x", "msvcr14x\msvcr14x.vcxproj", "{C5CEF085-11DD-4A18-9D4D-BE5DDFC63402}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvcp140_", "msvcp140_\msvcp140_.vcxproj", "{2A9057C5-4E11-4577-BBB6-6D80298180D7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvcp14x", "msvcp14x\msvcp14x.vcxproj", "{2A9057C5-4E11-4577-BBB6-6D80298180D7}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C5CEF085-11DD-4A18-9D4D-BE5DDFC63402} = {C5CEF085-11DD-4A18-9D4D-BE5DDFC63402}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvcp140_static_part", "msvcp140_static_part\msvcp140_static_part.vcxproj", "{E8586985-2CA5-4966-83B9-26847250E3E2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvcp14x_static_part", "msvcp14x_static_part\msvcp14x_static_part.vcxproj", "{E8586985-2CA5-4966-83B9-26847250E3E2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2A9057C5-4E11-4577-BBB6-6D80298180D7} = {2A9057C5-4E11-4577-BBB6-6D80298180D7}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vcruntime", "vcruntime\vcruntime.vcxproj", "{2533F8EF-3719-4F4D-B5E3-100387B5B1F1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "concrt140_", "concrt140_\concrt140_.vcxproj", "{E9ECED0F-4A90-4143-A1A3-EF1E03B8DD25}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "concrt14x", "concrt14x\concrt14x.vcxproj", "{E9ECED0F-4A90-4143-A1A3-EF1E03B8DD25}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C5CEF085-11DD-4A18-9D4D-BE5DDFC63402} = {C5CEF085-11DD-4A18-9D4D-BE5DDFC63402}
 		{2A9057C5-4E11-4577-BBB6-6D80298180D7} = {2A9057C5-4E11-4577-BBB6-6D80298180D7}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvcrt_", "msvcrt_\msvcrt_.vcxproj", "{5CA765FA-D872-4D6F-8155-7E3BB0B20ABC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msvcrx", "msvcrx\msvcrx.vcxproj", "{5CA765FA-D872-4D6F-8155-7E3BB0B20ABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

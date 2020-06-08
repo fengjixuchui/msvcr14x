@@ -80,7 +80,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="msvcp140_.cpp">
+    <ClCompile Include="msvcp14x.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\_tolower.c">
@@ -449,7 +449,7 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\memory_resource.cpp">
       <Filter>stl</Filter>
     </ClCompile>
-    <ClCompile Include="..\msvcr140_\win2000fix.cpp">
+    <ClCompile Include="..\msvcr14X\win2000fix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exception.cpp">
@@ -478,7 +478,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="msvcp140_.def">
+    <None Include="msvcp14x.def">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

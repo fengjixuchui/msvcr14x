@@ -1,52 +1,87 @@
 EXPORTS
+	_CIacos
+	_CIasin
+	_CIatan
+	_CIatan2
+	_CIcos
+	_CIcosh
+	_CIexp
+	_CIfmod
+	_CIlog
+	_CIlog10
+	_CIpow
+	_CIsin
+	_CIsinh
+	_CIsqrt
+	_CItan
+	_CItanh
 	_Cbuild
 	_Cmulcc
 	_Cmulcr
 	_CreateFrameInfo
 	_CxxThrowException
+	_EH_prolog
 	_FCbuild
 	_FCmulcc
 	_FCmulcr
 	_FindAndUnlinkFrame
-	_GetImageBase
-	_GetThrowImageBase
 	_IsExceptionObjectToBeDestroyed
 	_LCbuild
 	_LCmulcc
 	_LCmulcr
-	_SetImageBase
-	_SetThrowImageBase
+	_NLG_Dispatch2
+	_NLG_Return
+	_NLG_Return2
 	_SetWinRTOutOfMemoryExceptionCallback
 	__AdjustPointer
 	__BuildCatchObject
 	__BuildCatchObjectHelper
-	__C_specific_handler
-	__C_specific_handler_noexcept
 	__CxxDetectRethrow
 	__CxxExceptionFilter
 	__CxxFrameHandler
 	__CxxFrameHandler2
 	__CxxFrameHandler3
+	__CxxLongjmpUnwind
 	__CxxQueryExceptionSize
 	__CxxRegisterExceptionObject
 	__CxxUnregisterExceptionObject
 	__DestructExceptionObject
 	__FrameUnwindFilter
 	__GetPlatformExceptionInfo
-	__NLG_Dispatch2
-	__NLG_Return2
 	__RTCastToVoid
 	__RTDynamicCast
 	__RTtypeid
 	__TypeMatch
+	__control87_2
 	__current_exception
 	__current_exception_context
 	__dcrt_get_wide_environment_from_os
 	__dcrt_initial_narrow_environment
 	__fpe_flt_rounds
 	__initialize_lconv_for_unsigned_char
+	__intrinsic_abnormal_termination=_abnormal_termination
 	__intrinsic_setjmp
-	__intrinsic_setjmpex
+	__libm_sse2_acos
+	__libm_sse2_acosf
+	__libm_sse2_asin
+	__libm_sse2_asinf
+	__libm_sse2_atan
+	__libm_sse2_atan2
+	__libm_sse2_atanf
+	__libm_sse2_cos
+	__libm_sse2_cosf
+	__libm_sse2_exp
+	__libm_sse2_expf
+	__libm_sse2_log
+	__libm_sse2_log10
+	__libm_sse2_log10f
+	__libm_sse2_logf
+	__libm_sse2_pow
+	__libm_sse2_powf
+	__libm_sse2_sin
+	__libm_sse2_sinf
+	__libm_sse2_tan
+	__libm_sse2_tanf
 	__processing_throw
 	__report_gsfailure
 	__setusermatherr
@@ -72,12 +107,14 @@ EXPORTS
 	_cgetws
 	_chgsign
 	_chgsignf
+	_chkesp
 	_clearfp
 	_control87
 	_controlfp
 	_controlfp_s
 	_copysign
 	_copysignf
+	_crt_debugger_hook
 	_d_int
 	_dclass
 	_dexp
@@ -91,6 +128,9 @@ EXPORTS
 	_dtest
 	_dunscale
 	_except1
+	_except_handler2
+	_except_handler3
+	_except_handler4_common=_except_handler4_common_downlevel
 	_fd_int
 	_fdclass
 	_fdexp
@@ -104,23 +144,21 @@ EXPORTS
 	_fdtest
 	_fdunscale
 	_finite
-	_finitef
 	_fpclass
-	_fpclassf
 	_fpieee_flt
 	_fpreset
-	_get_FMA3_enable
+	_ftol
 	_get_narrow_winmain_command_line
 	_get_purecall_handler
 	_get_unexpected
 	_get_wide_winmain_command_line
+	_global_unwind2
 	_hypot
 	_hypotf
 	_initialize_narrow_environment
 	_initialize_wide_environment
 	_is_exception_typeof
 	_isnan
-	_isnanf
 	_j0
 	_j1
 	_jn
@@ -135,17 +173,28 @@ EXPORTS
 	_ldsin
 	_ldtest
 	_ldunscale
-	_local_unwind
+	_libm_sse2_acos_precise
+	_libm_sse2_asin_precise
+	_libm_sse2_atan_precise
+	_libm_sse2_cos_precise
+	_libm_sse2_exp_precise
+	_libm_sse2_log10_precise
+	_libm_sse2_log_precise
+	_libm_sse2_pow_precise
+	_libm_sse2_sin_precise
+	_libm_sse2_sqrt_precise
+	_libm_sse2_tan_precise
+	_local_unwind2
+	_local_unwind4
 	_lock_locales
 	_logb
-	_logbf
+	_longjmpex
 	_lrotl
 	_lrotr
 	_mbcasemap CONSTANT
 	_mbsdup
 	_memccpy
 	_nextafter
-	_nextafterf
 	_open
 	_purecall
 	_query_new_handler
@@ -154,14 +203,17 @@ EXPORTS
 	_rotr
 	_rotr64
 	_scalb
-	_scalbf
-	_set_FMA3_enable
+	_seh_longjmp_unwind4
+	_seh_longjmp_unwind
+	_set_SSE2_enable
 	_set_controlfp
 	_set_new_handler
 	_set_purecall_handler
 	_set_se_translator
+	_setjmp3
 	_sopen
 	_statusfp
+	_statusfp2
 	_strnset
 	_strrev
 	_strset
@@ -176,19 +228,15 @@ EXPORTS
 	_yn
 	abs
 	acos
-	acosf
 	acosh
 	acoshf
 	acoshl
 	asin
-	asinf
 	asinh
 	asinhf
 	asinhl
 	atan
 	atan2
-	atan2f
-	atanf
 	atanh
 	atanhf
 	atanhl
@@ -226,7 +274,6 @@ EXPORTS
 	ccoshl
 	ccosl
 	ceil
-	ceilf
 	cexp
 	cexpf
 	cexpl
@@ -246,9 +293,7 @@ EXPORTS
 	copysignf
 	copysignl
 	cos
-	cosf
 	cosh
-	coshf
 	cpow
 	cpowf
 	cpowl
@@ -283,7 +328,6 @@ EXPORTS
 	exp2
 	exp2f
 	exp2l
-	expf
 	expm1
 	expm1f
 	expm1l
@@ -301,7 +345,6 @@ EXPORTS
 	fesetround
 	fetestexcept
 	floor
-	floorf
 	fma
 	fmaf
 	fmal
@@ -312,7 +355,6 @@ EXPORTS
 	fminf
 	fminl
 	fmod
-	fmodf
 	frexp
 	hypot
 	ilogb
@@ -332,7 +374,6 @@ EXPORTS
 	llroundl
 	log
 	log10
-	log10f
 	log1p
 	log1pf
 	log1pl
@@ -342,7 +383,6 @@ EXPORTS
 	logb
 	logbf
 	logbl
-	logf
 	longjmp
 	lrint
 	lrintf
@@ -358,7 +398,6 @@ EXPORTS
 	memmove_s
 	memset
 	modf
-	modff
 	nan
 	nanf
 	nanl
@@ -395,27 +434,24 @@ EXPORTS
 	scalbnf
 	scalbnl
 	set_unexpected
-	setjmp
 	sin
-	sinf
 	sinh
-	sinhf
 	sqrt
-	sqrtf
 	strcat
 	strchr
 	strcmp
 	strcpy
+	strcspn
 	strlen
 	strncat
 	strncmp
 	strncpy
+	strpbrk
 	strrchr
+	strspn
 	strstr
 	tan
-	tanf
 	tanh
-	tanhf
 	tgamma
 	tgammaf
 	tgammal
@@ -425,38 +461,41 @@ EXPORTS
 	unexpected
 	wcscat
 	wcschr
+	wcschr
 	wcscmp
 	wcscpy
 	wcslen
 	wcsrchr
 	wcsstr
+	wctype
 	wmemcpy_s
 	wmemmove_s
 
-	;vcruntime140.dll中的导出函数
+	;vcruntime14x.dll中的导出函数
 	_CreateFrameInfo
 	_CxxThrowException
+	_EH_prolog
 	_FindAndUnlinkFrame
 	_IsExceptionObjectToBeDestroyed
+	_NLG_Dispatch2
+	_NLG_Return
+	_NLG_Return2
 	_SetWinRTOutOfMemoryExceptionCallback
 	__AdjustPointer
 	__BuildCatchObject
 	__BuildCatchObjectHelper
-	__C_specific_handler
-	__C_specific_handler_noexcept
 	__CxxDetectRethrow
 	__CxxExceptionFilter
 	__CxxFrameHandler
 	__CxxFrameHandler2
 	__CxxFrameHandler3
+	__CxxLongjmpUnwind
 	__CxxQueryExceptionSize
 	__CxxRegisterExceptionObject
 	__CxxUnregisterExceptionObject
 	__DestructExceptionObject
 	__FrameUnwindFilter
 	__GetPlatformExceptionInfo
-	__NLG_Dispatch2
-	__NLG_Return2
 	__RTCastToVoid
 	__RTDynamicCast
 	__RTtypeid
@@ -464,7 +503,6 @@ EXPORTS
 	__current_exception
 	__current_exception_context
 	__intrinsic_setjmp
-	__intrinsic_setjmpex
 	__processing_throw
 	__report_gsfailure
 	__std_exception_copy
@@ -484,13 +522,23 @@ EXPORTS
 	__vcrt_GetModuleHandleW
 	__vcrt_InitializeCriticalSectionEx
 	__vcrt_LoadLibraryExW
+	_chkesp
+	_except_handler2
+	_except_handler3
+	;_except_handler4_common
 	_get_purecall_handler
 	_get_unexpected
+	_global_unwind2
 	_is_exception_typeof
-	_local_unwind
+	_local_unwind2
+	_local_unwind4
+	_longjmpex
 	_purecall
+	_seh_longjmp_unwind4
+	_seh_longjmp_unwind
 	_set_purecall_handler
 	_set_se_translator
+	_setjmp3
 	longjmp
 	memchr
 	memcmp
@@ -510,10 +558,11 @@ EXPORTS
 	_iob DATA 
 
 	;cpp相关功能函数
-	??_U@YAPEAX_K@Z
-	??_U@YAPEAX_KHPEBDH@Z
-	??_V@YAXPEAX@Z
-	??_V@YAXPEAXHPEBDH@Z
+	??_V@YAXPAX@Z
+	??_V@YAXPAXI@Z
+	??2@YAPAXI@Z
+	??3@YAXPAXI@Z
+	??_M@YGXPAXIIP6EX0@Z@Z
 	??_7type_info@@6B@
 
 
@@ -523,4 +572,5 @@ EXPORTS
 	_CallMemberFunction0
 	_CallMemberFunction1
 	_CallMemberFunction2
-	_alloca_probe2
+	_alloca_probe_16
+

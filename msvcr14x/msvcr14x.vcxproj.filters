@@ -96,7 +96,7 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="msvcr140_.h">
+    <ClInclude Include="msvcr14x.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\corecrt_internal.h">
@@ -1513,7 +1513,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="msvcr140_x86.def">
+    <None Include="msvcr14x_x86.def">
       <Filter>源文件</Filter>
     </None>
     <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\mbstring\mbsncat_s.inl">
@@ -1528,7 +1528,7 @@
     <None Include="C:\Program Files (x86)\Windows Kits\10\Source\10.0.19041.0\ucrt\inc\i386\cruntime.inc">
       <Filter>ucrt\inc\i386</Filter>
     </None>
-    <None Include="msvcr140_x64.def">
+    <None Include="msvcr14x_x64.def">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

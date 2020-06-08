@@ -7,7 +7,7 @@
 
 #include <time.h>
 
-HMODULE hmod_MSVCR140__dll;
+HMODULE hmod_MSVCR14X__dll;
 
 size_t(__cdecl* __Wcsftime)(
 	wchar_t*       const buffer,
@@ -24,13 +24,13 @@ extern "C" size_t __cdecl _Wcsftime(
 	void*          const lc_time_arg
 )
 {
-	if (hmod_MSVCR140__dll==NULL)
+	if (hmod_MSVCR14X__dll==NULL)
 	{
-		hmod_MSVCR140__dll = LoadLibrary(TEXT("MSVCR140_.dll"));
+		hmod_MSVCR14X__dll = LoadLibrary(TEXT("MSVCR14X.dll"));
 	}
 	if (__Wcsftime==NULL)
 	{
-		__Wcsftime = (size_t(__cdecl *)(wchar_t *const, const ::size_t, const wchar_t *const, const tm *const, void *const))GetProcAddress(hmod_MSVCR140__dll, "_Wcsftime");
+		__Wcsftime = (size_t(__cdecl *)(wchar_t *const, const ::size_t, const wchar_t *const, const tm *const, void *const))GetProcAddress(hmod_MSVCR14X__dll, "_Wcsftime");
 	}
 	return __Wcsftime(buffer, max_size, format, timeptr, lc_time_arg);
 }
@@ -38,14 +38,14 @@ extern "C" size_t __cdecl _Wcsftime(
 void (__cdecl* __libm_sse2_sqrt_precise)(void);
 extern "C" void __cdecl _libm_sse2_sqrt_precise(void)
 {
-	if (hmod_MSVCR140__dll == NULL)
+	if (hmod_MSVCR14X__dll == NULL)
 	{
-		hmod_MSVCR140__dll = LoadLibrary(TEXT("MSVCR140_.dll"));
+		hmod_MSVCR14X__dll = LoadLibrary(TEXT("MSVCR14X.dll"));
 	}
 
 	if (__libm_sse2_sqrt_precise==NULL)
 	{
-		__libm_sse2_sqrt_precise = (void(__cdecl *)(void))GetProcAddress(hmod_MSVCR140__dll, "_libm_sse2_sqrt_precise");
+		__libm_sse2_sqrt_precise = (void(__cdecl *)(void))GetProcAddress(hmod_MSVCR14X__dll, "_libm_sse2_sqrt_precise");
 	}
 
 	return __libm_sse2_sqrt_precise();

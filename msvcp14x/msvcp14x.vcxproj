@@ -72,19 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>MSVCP140_</TargetName>
+    <TargetName>MSVCP14X</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>MSVCP140D_</TargetName>
+    <TargetName>MSVCP14XD</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>MSVCP140D_</TargetName>
+    <TargetName>MSVCP14XD</TargetName>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>MSVCP140_</TargetName>
+    <TargetName>MSVCP14X</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -93,7 +93,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>MSVCP140_EXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -105,13 +105,13 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT140_.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrt.lib;$(SolutionDir)$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
-      <DelayLoadDLLs>CONCRT140_.dll</DelayLoadDLLs>
+      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
+      <DelayLoadDLLs>CONCRT14X.dll</DelayLoadDLLs>
       <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
       <BaseAddress>0x50300000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -122,7 +122,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>MSVCP140_EXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X86_;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SupportJustMyCode>false</SupportJustMyCode>
@@ -130,14 +130,14 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
-      <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
+      <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalLibraryDirectories>lib\i386;..\msvcr140_\lib\i386</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>lib\i386;..\msvcr14X\lib\i386</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib;$(SolutionDir)$(Configuration)\CONCRT140D_.lib</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)$(Configuration)\ucrtd.lib;$(SolutionDir)$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
       <ForceSymbolReferences>?pinit@@3P6AHXZA</ForceSymbolReferences>
-      <DelayLoadDLLs>CONCRT140D_.dll</DelayLoadDLLs>
+      <DelayLoadDLLs>CONCRT14XD.dll</DelayLoadDLLs>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <BaseAddress>0x40300000</BaseAddress>
@@ -149,7 +149,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>MSVCP140_EXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <SupportJustMyCode>false</SupportJustMyCode>
@@ -157,13 +157,13 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
-      <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
+      <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>?pinit@@3P6AHXZEA</ForceSymbolReferences>
-      <DelayLoadDLLs>CONCRT140D_.dll</DelayLoadDLLs>
-      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\ucrtd.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT140D_.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>lib\amd64;..\msvcr140_\lib\amd64</AdditionalLibraryDirectories>
+      <DelayLoadDLLs>CONCRT14XD.dll</DelayLoadDLLs>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\ucrtd.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14XD.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrtd.lib;vcruntimed.lib;msvcprtd.lib</IgnoreSpecificDefaultLibraries>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -178,7 +178,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>MSVCP140_EXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>MSVCP14XEXPORTS;CRTDLL2;_DLL;_VCRT_WIN32_WINNT=_WIN32_WINNT_WINXP;_STL_WIN32_WINNT=_WIN32_WINNT_WINXP;_WIN32_WINNT=0x0602;NTDDI_VERSION=NTDDI_WIN8;_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH;WIN32_LEAN_AND_MEAN;STRICT;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;_CRT_DECLARE_NONSTDC_NAMES=1;_CRTBLD;_VCRT_ALLOW_INTERNALS;_HAS_OLD_IOSTREAMS_MEMBERS=1;_STL_CONCRT_SUPPORT;_KERNEL32_;_NTSYSTEM_;MSVC_SUPPLEMENTAL_1;_X64_;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.;$(VCToolsInstallDir)\crt\src\vcruntime;$(VCToolsInstallDir)\crt\src\concrt;$(VCToolsInstallDir)\crt\src\stl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -189,14 +189,14 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
-      <ModuleDefinitionFile>msvcp140_.def</ModuleDefinitionFile>
-      <ImportLibrary>$(OutDir)msvcp140_dynamic_part.lib</ImportLibrary>
+      <ModuleDefinitionFile>msvcp14x.def</ModuleDefinitionFile>
+      <ImportLibrary>$(OutDir)msvcp14x_dynamic_part.lib</ImportLibrary>
       <AdditionalOptions>/IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>?pinit@@3P6AHXZEA</ForceSymbolReferences>
-      <DelayLoadDLLs>CONCRT140_.dll</DelayLoadDLLs>
-      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\ucrt.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT140_.lib</AdditionalDependencies>
+      <DelayLoadDLLs>CONCRT14X.dll</DelayLoadDLLs>
+      <AdditionalDependencies>$(SolutionDir)$(Platform)\$(Configuration)\ucrt.lib;$(SolutionDir)$(Platform)\$(Configuration)\CONCRT14X.lib</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>kernel32.lib;ucrt.lib;vcruntime.lib;msvcprt.lib</IgnoreSpecificDefaultLibraries>
-      <AdditionalLibraryDirectories>lib\amd64;..\msvcr140_\lib\amd64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>lib\amd64;..\msvcr14X\lib\amd64</AdditionalLibraryDirectories>
       <BaseAddress>0x503000000</BaseAddress>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
@@ -223,7 +223,7 @@
     <ClInclude Include="trnsctrl.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\msvcr140_\win2000fix.cpp">
+    <ClCompile Include="..\msvcr14X\win2000fix.cpp">
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </ForcedIncludeFiles>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include</AdditionalIncludeDirectories>
@@ -412,7 +412,7 @@
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exception.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\uncaught_exceptions.cpp" />
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\stl\pplerror.cpp" />
-    <ClCompile Include="msvcp140_.cpp" />
+    <ClCompile Include="msvcp14x.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -426,7 +426,7 @@
     <ClCompile Include="winapisupp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="msvcp140_.def" />
+    <None Include="msvcp14x.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

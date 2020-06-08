@@ -188,7 +188,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="concrt140_.cpp">
+    <ClCompile Include="concrt14x.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="$(VCToolsInstallDir)\crt\src\concrt\Agent.cpp">
@@ -373,7 +373,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="concrt140_.def">
+    <None Include="concrt14x.def">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>
