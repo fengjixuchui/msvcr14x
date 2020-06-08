@@ -1,4 +1,8 @@
 # msvcr14x
+
+## prior project:
+https://github.com/sonyps5201314/ntdll.git
+
 ## build steps：
 1. git clone https://github.com/sonyps5201314/msvcr14x.git  
 2. open msvcr14x.sln with visual studio 2017.  
