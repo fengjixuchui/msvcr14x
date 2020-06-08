@@ -52,6 +52,9 @@
     <None Include="msvcrt_x86.def">
       <Filter>源文件</Filter>
     </None>
+    <None Include="msvcrt_x64.def">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="msvcrt.asm">
