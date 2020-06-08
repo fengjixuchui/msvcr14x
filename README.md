@@ -17,6 +17,12 @@ msvcrx project is experimental project,so do not use it,it can be removed in the
 2. Explorer navigate to 'C:\Users\%USERNAME%\AppData\Local\Microsoft\MSBuild\v4.0\' directory, replace "Microsoft.Cpp.Win32.user.props" and "Microsoft.Cpp.x64.user.props" with the same files in your directory. now all finished. rebuild your vc solution you will find your app no longer dependent on vc crt dlls and app-sets dlls, enjoy it.  
 3. copy all generated dlls(MSVCR14X(D).dll,MSVCP14X(D).dll,CONCRT14X(D).dll) to 'C:\Windows\SysWOW64'(for x86 32bit programs), and to 'C:\Windows\System32'(for x64 64bit programs), is a good idea for test and debug.
 
+## compare images:
+Before![Before](images/before.png)      After![After](images/after.png)
+
+## extended project:
+https://github.com/sonyps5201314/RemoveApiSets.git is a tool for remove ApiSets for existed executable files
+
 ## refer to:
 https://source.winehq.org/git/wine.git
 
