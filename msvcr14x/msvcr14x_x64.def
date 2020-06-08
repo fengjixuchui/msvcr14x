@@ -434,7 +434,7 @@ EXPORTS
 	wmemcpy_s
 	wmemmove_s
 
-	;vcruntime14x.dll中的导出函数
+	;vcruntime140.dll中的导出函数
 	_CreateFrameInfo
 	_CxxThrowException
 	_FindAndUnlinkFrame
